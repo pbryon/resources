@@ -1,9 +1,9 @@
+## Contents
+
 * [C# General](#c-general)
 * [Entity Framework Core](#entity-framework-core-ef-core)
 * [.NET Core MVC 1.1](#net-core-11-mvc)
 * [.NET Core 2.0](#net-core-20)
-
-These are some learning materials used to build Roleplay.Redacted.
 
 ## C# general
 | Topic | Source | URL |
