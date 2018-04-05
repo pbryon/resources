@@ -8,6 +8,7 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Documentation | Microsoft Docs | [XML Documentation Comments](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) |
+| Generics | Erip Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
 | HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://msdn.microsoft.com/en-us/library/ms256471(v=vs.110).aspx)|
 | Iterators | Ray Chen | The implementation of iterators and their consequences [(Part 1)](https://blogs.msdn.microsoft.com/oldnewthing/20080812-00/?p=21273/) [(Part 2)](https://blogs.msdn.microsoft.com/oldnewthing/20080813-00/?p=21253) [(Part 3)](https://blogs.msdn.microsoft.com/oldnewthing/20080814-00/?p=21243) [(Part 4)](https://blogs.msdn.microsoft.com/oldnewthing/20080815-00/?p=21223/) |
 | LINQ | Microsoft Docs | [Getting started with LINQ](https://msdn.microsoft.com/en-us/library/bb397933.aspx) |
@@ -27,19 +28,21 @@
 | | CodeGuru | [Performing Asynchronous Operations using Entity Framework](http://www.codeguru.com/csharp/.net/net_framework/performing-asynchronous-operations-using-entity-framework.htm) |
 | Databases | CodeProject | [Storing complex properties as JSON](https://www.codeproject.com/Articles/1166099/Entity-Framework-Storing-complex-properties-as-JSO) |
 | | Microsoft Docs | [MSSQL Connection Strings](https://msdn.microsoft.com/en-us/library/jj653752(v=vs.110).aspx) |
+| | Npgsql Docs | [Getting Started \[with PostgreSQL\]](http://www.npgsql.org/efcore/index.html) |
 | Deployment | Microsoft Docs | [Configuring a database server for web deploy publishing](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing)|
 | | Microsoft Docs | [Deploying database projects](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects) |
 | Fluid API | Scott Sauber | [Configuring EF Core 2.0 with IEntityTypeConfiguration](https://scottsauber.com/2017/09/11/customizing-ef-core-2-0-with-ientitytypeconfiguration/) |
 | | Microsoft Docs | [Cascade Delete](https://docs.microsoft.com/en-us/ef/core/saving/cascade-delete) |
+| Migrations | Brice Lambson | [How to use EFCore Migrations with layers](https://github.com/bricelam/Sample-SplitMigrations) |
 | Testing| Microsoft Docs | [Implementing the Repository and Unit of Work patterns](https://docs.microsoft.com/en-gb/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) |
 | | Microsoft Docs | [Repository pattern benefits](https://msdn.microsoft.com/en-us/library/ff649690.aspx) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
 
 ## .NET Core MVC
 
-
 | Topic | Source | URL |
 | --- | --- | --- |
+| dotnet CLI | Maarten Balliauw | [Extending dotnet CLI with custom tools (blog post)](https://blog.maartenballiauw.be/post/2017/04/10/extending-dotnet-cli-with-custom-tools.html) and [dotnetcli-init (GitHub)](https://github.com/maartenba/dotnetcli-init) |
 | Client-side| Microsoft Docs | [Bundling and minification](https://docs.microsoft.com/en-us/aspnet/core/client-side/bundling-and-minification) |
 |Middleware | Microsoft Docs | [ASP.NET Core Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware) |
 | Razor pages| Microsoft Docs | [Getting started with Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) |
