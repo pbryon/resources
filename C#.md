@@ -34,6 +34,7 @@
 | Fluid API | Scott Sauber | [Configuring EF Core 2.0 with IEntityTypeConfiguration](https://scottsauber.com/2017/09/11/customizing-ef-core-2-0-with-ientitytypeconfiguration/) |
 | | Microsoft Docs | [Cascade Delete](https://docs.microsoft.com/en-us/ef/core/saving/cascade-delete) |
 | Migrations | Brice Lambson | [How to use EFCore Migrations with layers](https://github.com/bricelam/Sample-SplitMigrations) |
+| | Microsoft Docs | [Diesng-Time DbContext Creation](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dbcontext-creation) |
 | Testing| Microsoft Docs | [Implementing the Repository and Unit of Work patterns](https://docs.microsoft.com/en-gb/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) |
 | | Microsoft Docs | [Repository pattern benefits](https://msdn.microsoft.com/en-us/library/ff649690.aspx) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
