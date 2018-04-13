@@ -3,6 +3,7 @@
 * [C# General](#c-general)
 * [Entity Framework Core](#entity-framework-core-ef-core)
 * [.NET Core MVC](#net-core-mvc)
+* [CI/CD](#ci-cd)
 
 ## C# general
 | Topic | Source | URL |
@@ -64,3 +65,12 @@
 | | Microsoft Docs | [Authoring Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/authoring) |
 | | Microsoft Docs | [View Components](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components) |
 | | Microsoft Docs | [Serving static files](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files) |
+
+## CI/CD
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| AppVeyor | Andrew Lock | [Publishing your first NuGet package with AppVeyor and MyGet](https://andrewlock.net/publishing-your-first-nuget-package-with-appveyor-and-myget/) |
+| CI | Microsoft Docs | [Using .NET Core SDK and tools in Continuous Integration](https://docs.microsoft.com/en-us/dotnet/core/tools/using-ci-with-cli) |
+| Travis CI | Travis docs | [Building a C#, F# or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/) |
+| | Andrew Lock | [Adding Travis CI to a a .Net Core app](https://andrewlock.net/adding-travis-ci-to-a-net-core-app/) |
