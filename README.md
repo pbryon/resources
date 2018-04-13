@@ -4,4 +4,6 @@ Learning resources I've used across programming languages
 
 # Topics (see topics folder)
 
-[C#](./topics/C%23.md)
+- [bash](./topics/bash.md)
+- [C#](./topics/C%23.md)
+- [PowerShell](./topics/PowerShell.md)
