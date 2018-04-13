@@ -1,0 +1,6 @@
+$project = "src/TestLinks"
+write-host "Running dotnet restore..."
+iex "& dotnet restore $project"
+write-host ""
+iex "& dotnet run --project $project"
+read-host -prompt "[Press enter]"
