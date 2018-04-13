@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -14,15 +13,12 @@ namespace TestLinks
         {
             Console.WriteLine( "Checking topic links..." );
 
-            var dir = GetTopicDir();
             bool hadError = false;
             List<string> broken;
             List<Link> links;
-            string topicName;
-            foreach( var topic in Directory.EnumerateFiles(dir, "*.md" )) {
+            foreach( var topic in Directory.EnumerateFiles( GetTopicDir(), "*.md" )) {
                 broken = new List<string>();
-                topicName = Path.GetFileNameWithoutExtension( topic );
-                Console.WriteLine( "\nTopic '{0}':", topicName );
+                Console.WriteLine( "\nTopic '{0}':", Path.GetFileNameWithoutExtension( topic ) );
                 links = await ParseLinks( topic );
                 foreach( var link in links ) {
                     if ( await LinkWorks( link ) )
@@ -39,19 +35,11 @@ namespace TestLinks
 
                 Console.WriteLine( "--> broken links:" );
                 foreach( var link in broken ) {
-                    Console.WriteLine( $"{link}" );
+                    Console.WriteLine( $"  {link}" );
                 }
             }
 
             Environment.Exit( hadError ? 1 : 0 );
-        }
-
-        private static void SetupConsole ()
-        {
-            var stdout = Console.OpenStandardOutput();
-            var con = new StreamWriter( stdout, Encoding.ASCII );
-            con.AutoFlush = true;
-            Console.SetOut( con );
         }
 
         private static string GetTopicDir()
