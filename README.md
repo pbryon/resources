@@ -2,6 +2,6 @@
 
 Learning resources I've used across programming languages
 
-# Topics
+# Topics (see topics folder)
 
-[C#](./topics/C#.md)
+[C#](./topics/C%23.md)
