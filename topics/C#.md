@@ -16,6 +16,7 @@
 | Logging | Serilog | [Serilog.net](https://serilog.net/) |
 |  | Github| [Serilog.Sinks.Console](https://github.com/serilog/serilog-sinks-console) |
 |  | Blog | [Logging scopes and exceptions](https://andrewlock.net/how-to-include-scopes-when-logging-exceptions-in-asp-net-core/) |
+| Mocking | GitHub | [Moq Quickstart](https://github.com/Moq/moq4/wiki/Quickstart) |
 | Scaffolding | MSDN Blogs | [Creating a custom scaffolder for Visual Studio](https://blogs.msdn.microsoft.com/webdev/2014/04/03/creating-a-custom-scaffolder-for-visual-studio/) |
 | Testing | NUnit docs | [NUnit Documentation](https://github.com/nunit/docs/wiki/NUnit-Documentation) |
 | Visual Studio | Microsoft Docs | [Shortcuts in Visual Studio](https://msdn.microsoft.com/en-us/library/da5kh0wa.aspx) |
