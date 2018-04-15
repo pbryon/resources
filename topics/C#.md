@@ -9,6 +9,7 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Documentation | Microsoft Docs | [XML Documentation Comments](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) |
+| Delegates | MSDN | [Funct<T, TResult> Delegate](https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx) |
 | Generics | Erip Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
 | HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://msdn.microsoft.com/en-us/library/ms256471(v=vs.110).aspx)|
 | Iterators | Ray Chen | The implementation of iterators and their consequences [(Part 1)](https://blogs.msdn.microsoft.com/oldnewthing/20080812-00/?p=21273/) [(Part 2)](https://blogs.msdn.microsoft.com/oldnewthing/20080813-00/?p=21253) [(Part 3)](https://blogs.msdn.microsoft.com/oldnewthing/20080814-00/?p=21243) [(Part 4)](https://blogs.msdn.microsoft.com/oldnewthing/20080815-00/?p=21223/) |
@@ -54,7 +55,8 @@
 | Swagger | Microsoft Docs | [ASP.NET Core Web API help pages with Open API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger) |
 | | GitHub | [SwashBuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) |
 | | GitHub issue | [Support for ASP.NET API Versioning?](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/244) |
-| Testing | Microsoft Docs | [Razor pages testing](https://docs.microsoft.com/en-us/aspnet/core/testing/razor-pages-testing) |
+| Testing | Microsoft Docs | [Testing Controller logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-2.1) |
+| | Microsoft Docs | [Razor pages testing](https://docs.microsoft.com/en-us/aspnet/core/testing/razor-pages-testing) |
 | | Microsoft Docs | [Unit testing with dotnet test and xUnit](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) |
 | | Hossam Barakat | [Unit testing ASP.NET Core Tag Helper](http://www.hossambarakat.net/2016/02/29/unit-testing-asp-net-core-tag-helper/) |
 | Tutorial | Microsoft Docs | [Contoso University](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/) |
