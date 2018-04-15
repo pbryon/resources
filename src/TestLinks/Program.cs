@@ -91,7 +91,14 @@ namespace TestLinks
             
             using ( var client = new HttpClient() ) {
                 client.Timeout = new TimeSpan(0,0,10);
-                var response = await client.GetAsync( link.Url );
+
+                HttpResponseMessage response;
+                try {
+                    response = await client.GetAsync( link.Url );
+                }
+                catch( TaskCanceledException ex ) {
+                    response = new HttpResponseMessage(System.Net.HttpStatusCode.RequestTimeout);
+                }
 
                 Console.ForegroundColor = response.IsSuccessStatusCode ? ConsoleColor.Green : ConsoleColor.Red;
                 Console.Write( "  [{0}]", (int) response.StatusCode );
