@@ -6,6 +6,7 @@ Learning resources I've used across programming languages
 
 - [bash](./topics/bash.md)
 - [C#](./topics/C%23.md)
+- [git](./topics/git.md)
 - [PowerShell](./topics/PowerShell.md)
 
 # Checking dead links
