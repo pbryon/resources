@@ -8,6 +8,7 @@ Learning resources I've used across programming languages
 - [C#](./topics/C%23.md)
 - [git](./topics/git.md)
 - [PowerShell](./topics/PowerShell.md)
+- [(Web) standards](./topics/standards.md)
 
 # Checking dead links
 
