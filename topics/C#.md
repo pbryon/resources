@@ -55,6 +55,7 @@
 | Swagger | Microsoft Docs | [ASP.NET Core Web API help pages with Open API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger) |
 | | GitHub | [SwashBuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) |
 | | GitHub issue | [Support for ASP.NET API Versioning?](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/244) |
+| | StackOverflow | [Rename Model in SwashBuckle 6 with ASP.NET Core Web API](https://stackoverflow.com/questions/40644052/rename-model-in-swashbuckle-6-swagger-with-asp-net-core-web-api) |
 | Testing | Microsoft Docs | [Testing Controller logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-2.1) |
 | | Microsoft Docs | [Razor pages testing](https://docs.microsoft.com/en-us/aspnet/core/testing/razor-pages-testing) |
 | | Microsoft Docs | [Unit testing with dotnet test and xUnit](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) |
