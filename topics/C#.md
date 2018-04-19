@@ -49,7 +49,9 @@
 | --- | --- | --- |
 | dotnet CLI | Maarten Balliauw | [Extending dotnet CLI with custom tools (blog post)](https://blog.maartenballiauw.be/post/2017/04/10/extending-dotnet-cli-with-custom-tools.html) and [dotnetcli-init (GitHub)](https://github.com/maartenba/dotnetcli-init) |
 | Client-side| Microsoft Docs | [Bundling and minification](https://docs.microsoft.com/en-us/aspnet/core/client-side/bundling-and-minification) |
-|Middleware | Microsoft Docs | [ASP.NET Core Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware) |
+| HTTPS | Microsoft Docs | [Enforece HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.0&tabs=visual-studio) |
+| | MSDN blogs | [Configuring HTTPS in ASP.NET Core across different platforms](https://blogs.msdn.microsoft.com/webdev/2017/11/29/configuring-https-in-asp-net-core-across-different-platforms/) |
+| Middleware | Microsoft Docs | [ASP.NET Core Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware) |
 | Razor pages| Microsoft Docs | [Getting started with Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) |
 | | Hisham Binateya | [Friendly URLs in Razor pages](http://hishambinateya.com/friendly-urls-in-razor-pages) |
 | Security | Microsoft Docs | [Overview of ASP.NET Core Security](https://docs.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-2.1) |
@@ -65,7 +67,7 @@
 | | Microsoft Docs | [Razor pages testing](https://docs.microsoft.com/en-us/aspnet/core/testing/razor-pages-testing) |
 | | Microsoft Docs | [Unit testing with dotnet test and xUnit](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) |
 | | Hossam Barakat | [Unit testing ASP.NET Core Tag Helper](http://www.hossambarakat.net/2016/02/29/unit-testing-asp-net-core-tag-helper/) |
-| Tutorial | Microsoft Docs | [Contoso University](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/) |
+| Tutorials | Microsoft Docs | [Contoso University](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/) |
 | | Microsoft Docs | [Building Your First Web API with ASP.NET Core MVC and Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api) |
 | | Microsoft Docs| [Music Store](https://github.com/aspnet/MusicStore)|
 | Validation | Microsoft Docs | [System.ComponentModel.DataAnnotations namespace](https://msdn.microsoft.com/en-us/library/system.componentmodel.dataannotations(v=vs.110).aspx)
