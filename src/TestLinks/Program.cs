@@ -96,7 +96,7 @@ namespace TestLinks
                 try {
                     response = await client.GetAsync( link.Url );
                 }
-                catch( TaskCanceledException ex ) {
+                catch {
                     response = new HttpResponseMessage(System.Net.HttpStatusCode.RequestTimeout);
                 }
 
