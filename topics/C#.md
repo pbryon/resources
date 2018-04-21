@@ -3,6 +3,7 @@
 * [C# General](#c-general)
 * [Entity Framework Core](#entity-framework-core-ef-core)
 * [.NET Core MVC](#net-core-mvc)
+* [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
 * [CI/CD](#cicd)
 
 ## C# general
@@ -77,6 +78,12 @@
 | | Microsoft Docs | [Authoring Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/authoring) |
 | | Microsoft Docs | [View Components](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components) |
 | | Microsoft Docs | [Serving static files](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files) |
+
+## Windows Presentation Foundation (WPF)
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Tutorials | Microsoft Docs | [My first WPF desktop application](https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application) |
 
 ## CI/CD
 
