@@ -7,7 +7,7 @@ Learning resources I've used across programming languages
 - [bash](./topics/bash.md)
 - [C#](./topics/C%23.md)
 - [git](./topics/git.md)
-- [JavaScript](./topics/JavaScript.md)
+- [JavaScript](./topics/javascript.md)
 - [PowerShell](./topics/PowerShell.md)
 - [(Web) standards](./topics/standards.md)
 
