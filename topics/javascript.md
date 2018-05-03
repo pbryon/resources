@@ -3,6 +3,7 @@
 ## Contents
 
 * [JavaScript General](#javascript-general)
+* [TypeScript](#typescript)
 * [Frameworks](#frameworks)
 
 ## JavaScript General
@@ -11,6 +12,12 @@
 | --- | --- | --- |
 | Documentation | npm.org | [NPM documentation](https://docs.npmjs.com/) |
 | ES2017 | ECMA international | [ES2017 spec (PDF)](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) |
+
+## TypeScript
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| TSLint | GitHub | [Configuring TSLint](https://palantir.github.io/tslint/usage/configuration/) |
 
 ## Frameworks
 
