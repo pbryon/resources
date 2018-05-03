@@ -17,4 +17,5 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Angular | angular.io | [Angular documentation](https://angular.io/docs) |
+| | angular.io | [Tutorial: Tour of Heroes](https://angular.io/tutorial) |
 | Framework overview | todomvc.com |[Todo MVC](http://todomvc.com/) |
