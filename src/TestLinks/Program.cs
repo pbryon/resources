@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -11,12 +12,15 @@ namespace TestLinks
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine( "Checking topic links..." );
+            WriteIntro(args);
 
             bool hadError = false;
             List<string> broken;
             List<Link> links;
-            foreach( var topic in Directory.EnumerateFiles( GetTopicDir(), "*.md" )) {
+
+            var topics = GetTopics(args);
+
+            foreach( var topic in topics ) {
                 broken = new List<string>();
                 Console.WriteLine( "\nTopic '{0}':", Path.GetFileNameWithoutExtension( topic ) );
                 links = await ParseLinks( topic );
@@ -40,6 +44,30 @@ namespace TestLinks
             }
 
             Environment.Exit( hadError ? 1 : 0 );
+        }
+
+        private static void WriteIntro( string[] args ) {
+            Console.Write( "Checking topic links" );
+            bool first = true;
+            if ( args.Length > 0 ) {
+                Console.Write( " for topics:");
+                foreach( var arg in args ) {
+                    Console.Write( "{0} {1}", first ? "" : ",", arg );
+                    first = false;                
+                }
+            }
+            Console.WriteLine("...");
+        }
+
+        private static IEnumerable<string> GetTopics ( string[] args ) {
+            var output = new List<string>();
+            string basename;
+            foreach ( var file in Directory.EnumerateFiles( GetTopicDir(), "*.md" ) ) {
+                basename = Path.GetFileNameWithoutExtension(file);
+                if ( args.Length == 0 || args.Any(x => x.ToLower() == basename.ToLower() ) )
+                    output.Add(file);
+            }
+            return output;
         }
 
         private static string GetTopicDir()
