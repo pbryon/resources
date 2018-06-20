@@ -122,19 +122,28 @@ namespace TestLinks
                 client.Timeout = new TimeSpan(0,0,10);
 
                 HttpResponseMessage response;
+                string more = "";
                 try {
-                    client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html,application/json");
-                    client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0");
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html");
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "script");
+                    client.Timeout = new TimeSpan(0, 0, 30);
                     response = await client.GetAsync( link.Url );
                 }
-                catch {
-                    response = new HttpResponseMessage(HttpStatusCode.RequestTimeout);
+                catch (Exception ex ) {
+                    more = ex.InnerException.Message;
+                    response = new HttpResponseMessage(HttpStatusCode.Ambiguous);
                 }
 
                 Console.ForegroundColor = response.IsSuccessStatusCode ? ConsoleColor.Green : ConsoleColor.Red;
                 Console.Write( "  [{0}]", (int) response.StatusCode );
                 Console.ForegroundColor = original;
                 Console.WriteLine( $" {link.Url}" );
+                if ( !string.IsNullOrWhiteSpace(more) ) {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"  --> {more}");
+                    Console.ForegroundColor = original;
+                }
+                
 
                 return response.IsSuccessStatusCode;
             }
