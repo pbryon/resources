@@ -48,7 +48,8 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| dotnet CLI | Maarten Balliauw | [Extending dotnet CLI with custom tools (blog post)](https://blog.maartenballiauw.be/post/2017/04/10/extending-dotnet-cli-with-custom-tools.html) and [dotnetcli-init (GitHub)](https://github.com/maartenba/dotnetcli-init) |
+| dotnet CLI | GitHub | [.NET Command Line Interface](https://github.com/dotnet/cli/blob/master/README.md) |
+| | Maarten Balliauw | [Extending dotnet CLI with custom tools (blog post)](https://blog.maartenballiauw.be/post/2017/04/10/extending-dotnet-cli-with-custom-tools.html) and [dotnetcli-init (GitHub)](https://github.com/maartenba/dotnetcli-init) |
 | Client-side| Microsoft Docs | [Bundling and minification](https://docs.microsoft.com/en-us/aspnet/core/client-side/bundling-and-minification) |
 | HTTPS | Microsoft Docs | [Enforece HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.0&tabs=visual-studio) |
 | | MSDN blogs | [Configuring HTTPS in ASP.NET Core across different platforms](https://blogs.msdn.microsoft.com/webdev/2017/11/29/configuring-https-in-asp-net-core-across-different-platforms/) |
