@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -116,16 +117,18 @@ namespace TestLinks
         private static async Task<bool> LinkWorks( Link link )
         {
             var original = Console.ForegroundColor;
-            
+
             using ( var client = new HttpClient() ) {
                 client.Timeout = new TimeSpan(0,0,10);
 
                 HttpResponseMessage response;
                 try {
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html,application/json");
+                    client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "Mozilla/5.0");
                     response = await client.GetAsync( link.Url );
                 }
                 catch {
-                    response = new HttpResponseMessage(System.Net.HttpStatusCode.RequestTimeout);
+                    response = new HttpResponseMessage(HttpStatusCode.RequestTimeout);
                 }
 
                 Console.ForegroundColor = response.IsSuccessStatusCode ? ConsoleColor.Green : ConsoleColor.Red;
