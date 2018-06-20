@@ -1,6 +1,10 @@
 #!/bin/bash
 project="src/TestLinks"
-echo "Running dotnet restore..."
-eval "dotnet restore ${project}"
-echo ""
-eval "dotnet run --project ${project} $@"
+script=$(basename $0)
+error="$script: dotnet CLI not installed. See https://github.com/dotnet/cli/blob/master/README.md"
+command -v dotnet >/dev/null || echo $error >&2 && exit 1
+which dotnet >/dev/null || echo $error >&2 && exit 1
+echo Running dotnet restore...
+$(dotnet restore $project)
+echo
+$(dotnet run --project ${project} $@)
