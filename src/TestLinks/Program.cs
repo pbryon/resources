@@ -130,7 +130,8 @@ namespace TestLinks
                     response = await client.GetAsync( link.Url );
                 }
                 catch (Exception ex ) {
-                    more = ex.InnerException.Message;
+                    if ( ex.InnerException != null )
+                        more = ex.InnerException.Message;
                     response = new HttpResponseMessage(HttpStatusCode.Ambiguous);
                 }
 
