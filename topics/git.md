@@ -2,6 +2,9 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Diff-index | git-scm | [git diff-index](https://git-scm.com/docs/git-diff-index/1.7.9) |
+| Hooks | githooks.com | [Git hooks](https://githooks.com/) |
+| | codeinthehole.com | [Tips for pre-commit hooks](https://codeinthehole.com/tips/tips-for-using-a-git-pre-commit-hook/) |
 | Reset | git-scm | [Git reset](https://git-scm.com/docs/git-reset) |
 | Rebasing | git-scm | [Git rebase](https://git-scm.com/docs/git-rebase) |
 | Remotes | git-scm | [Git remote](https://git-scm.com/docs/git-remote) |
