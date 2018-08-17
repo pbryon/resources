@@ -9,6 +9,7 @@ Learning resources I've used across programming languages
 - [git](./topics/git.md)
 - [JavaScript](./topics/javascript.md)
 - [PowerShell](./topics/PowerShell.md)
+- [Visual Studio Extensions](./topics/vs-extensions.md)
 - [(Web) standards](./topics/standards.md)
 
 # Checking dead links
