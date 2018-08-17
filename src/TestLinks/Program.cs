@@ -18,12 +18,15 @@ namespace TestLinks
             bool hadError = false;
             List<string> broken;
             List<Link> links;
+            string name;
 
             var topics = GetTopics(args);
+            TextWriter stderr = Console.Error;
 
             foreach( var topic in topics ) {
                 broken = new List<string>();
-                Console.WriteLine( "\nTopic '{0}':", Path.GetFileNameWithoutExtension( topic ) );
+                name = Path.GetFileNameWithoutExtension( topic );
+                Console.WriteLine( $"\nTopic '{name}':" );
                 links = await ParseLinks( topic );
                 foreach( var link in links ) {
                     if ( await LinkWorks( link ) )
@@ -38,9 +41,9 @@ namespace TestLinks
                     continue;
                 }
 
-                Console.WriteLine( "--> broken links:" );
+                stderr.WriteLine( $"--> broken links for '{name}':" );
                 foreach( var link in broken ) {
-                    Console.WriteLine( $"  {link}" );
+                    stderr.WriteLine( $"  {link}" );
                 }
             }
 
@@ -48,13 +51,15 @@ namespace TestLinks
         }
 
         private static void WriteIntro( string[] args ) {
+            if ( args.Length == 1 )
+                return;
             Console.Write( "Checking topic links" );
             bool first = true;
             if ( args.Length > 0 ) {
                 Console.Write( " for topics:");
                 foreach( var arg in args ) {
                     Console.Write( "{0} {1}", first ? "" : ",", arg );
-                    first = false;                
+                    first = false;
                 }
             }
             Console.WriteLine("...");
@@ -62,10 +67,14 @@ namespace TestLinks
 
         private static IEnumerable<string> GetTopics ( string[] args ) {
             var output = new List<string>();
+            var search = new List<string>();
+            foreach( string arg in args ) {
+                search.Add( Path.GetFileNameWithoutExtension(arg) );
+            }
             string basename;
             foreach ( var file in Directory.EnumerateFiles( GetTopicDir(), "*.md" ) ) {
                 basename = Path.GetFileNameWithoutExtension(file);
-                if ( args.Length == 0 || args.Any(x => x.ToLower() == basename.ToLower() ) )
+                if ( args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower() ) )
                     output.Add(file);
             }
             return output;
@@ -144,7 +153,6 @@ namespace TestLinks
                     Console.WriteLine($"  --> {more}");
                     Console.ForegroundColor = original;
                 }
-                
 
                 return response.IsSuccessStatusCode;
             }

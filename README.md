@@ -16,4 +16,6 @@ Learning resources I've used across programming languages
 
 If you don't have .NET Core 2.0 installed, see [the prerequisites](./topics/dotnet-prerequisites.md).
 
-You can then run `test.sh` on Linux or MacOS and `test.ps1` on Windows (PowerShell)
+The `pre-commit.sh` script is a git pre-commit hook. Simply copy it to `.git/hooks/pre-commit` and it will check any changed topic files' links automatically through `test.sh`.
+
+You can also manually run `test.sh` on Linux or MacOS and `test.ps1` on Windows (PowerShell).
