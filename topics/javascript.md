@@ -18,8 +18,10 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Reusing C# data models in TypeScript | StackOverflow | [How to reuse existing C# class definitions in TypeScript projects](https://stackoverflow.com/questions/12957820/how-to-reuse-existing-c-sharp-class-definitions-in-typescript-projects) |
+| Serialisation | StackOverflow | [Initialize TypeScript object with JSON](https://stackoverflow.com/questions/22885995/how-do-i-initialize-a-typescript-object-with-a-json-object/22886730#22886730) |
 | TSLint | GitHub | [Configuring TSLint](https://palantir.github.io/tslint/usage/configuration/) |
-| Serialisation | StackOverflow | [Initialize TypeScript object with JSON](https://stackoverflow.com/a/22886730) |
+
 
 ## Angular
 
