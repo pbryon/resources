@@ -122,6 +122,7 @@ namespace TestLinks
         {
             var links = new List<Link>();
             string link = @"\[(.+)\]\((.+)\)";
+            string anchor = @"#.+$";
             string text, name, url;
             Match match;
 
@@ -136,6 +137,9 @@ namespace TestLinks
 
                         if ( !url.StartsWith( "http" ) )
                             continue;
+
+                        if ( Regex.IsMatch( url, anchor ) )
+                            url = Regex.Replace( url, anchor, "" );
 
                         links.Add( new Link( name, url ) );
                     }
