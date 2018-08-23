@@ -11,16 +11,21 @@ namespace TestLinks
 {
     class Program
     {
+        private static HttpClient client = new HttpClient();
+        private static bool debug = false;
+
         static async Task Main(string[] args)
         {
-            WriteIntro(args);
+            SetupHttpClient();
+
+            var topics = GetTopics( args );
+            WriteIntro(topics);
 
             bool hadError = false;
             List<string> broken;
             List<Link> links;
             string name;
 
-            var topics = GetTopics(args);
             TextWriter stderr = Console.Error;
 
             foreach( var topic in topics ) {
@@ -50,12 +55,23 @@ namespace TestLinks
             Environment.Exit( hadError ? 1 : 0 );
         }
 
-        private static void WriteIntro( string[] args ) {
-            if ( args.Length == 1 )
+        private static void SetupHttpClient()
+        {
+            client.Timeout = TimeSpan.FromMinutes( 1 );
+            client.DefaultRequestHeaders.TryAddWithoutValidation( "Accept", "text/html" );
+            client.DefaultRequestHeaders.TryAddWithoutValidation( "User-Agent", "script" );
+        }
+
+        private static void WriteIntro( IEnumerable<string> args ) {
+            if ( debug )
+                Console.Write( "Debug mode ON" );
+
+            if ( args.Count() == 1 )
                 return;
+
             Console.Write( "Checking topic links" );
             bool first = true;
-            if ( args.Length > 0 ) {
+            if ( args.Count() > 0 ) {
                 Console.Write( " for topics:");
                 foreach( var arg in args ) {
                     Console.Write( "{0} {1}", first ? "" : ",", arg );
@@ -66,12 +82,17 @@ namespace TestLinks
         }
 
         private static IEnumerable<string> GetTopics ( string[] args ) {
+            string basename;
             var output = new List<string>();
             var search = new List<string>();
+
             foreach( string arg in args ) {
-                search.Add( Path.GetFileNameWithoutExtension(arg) );
+                if ( Regex.IsMatch( arg, "^-{0,2}debug$" ) )
+                    debug = true;
+                else
+                    search.Add( Path.GetFileNameWithoutExtension(arg) );
             }
-            string basename;
+
             foreach ( var file in Directory.EnumerateFiles( GetTopicDir(), "*.md" ) ) {
                 basename = Path.GetFileNameWithoutExtension(file);
                 if ( args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower() ) )
@@ -127,35 +148,39 @@ namespace TestLinks
         {
             var original = Console.ForegroundColor;
 
-            using ( var client = new HttpClient() ) {
-                client.Timeout = new TimeSpan(0,0,10);
-
-                HttpResponseMessage response;
-                string more = "";
-                try {
-                    client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html");
-                    client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "script");
-                    client.Timeout = new TimeSpan(0, 0, 30);
-                    response = await client.GetAsync( link.Url );
-                }
-                catch (Exception ex ) {
-                    if ( ex.InnerException != null )
-                        more = ex.InnerException.Message;
-                    response = new HttpResponseMessage(HttpStatusCode.Ambiguous);
-                }
-
-                Console.ForegroundColor = response.IsSuccessStatusCode ? ConsoleColor.Green : ConsoleColor.Red;
-                Console.Write( "  [{0}]", (int) response.StatusCode );
-                Console.ForegroundColor = original;
-                Console.WriteLine( $" {link.Url}" );
-                if ( !string.IsNullOrWhiteSpace(more) ) {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine($"  --> {more}");
-                    Console.ForegroundColor = original;
-                }
-
-                return response.IsSuccessStatusCode;
+            HttpResponseMessage response;
+            string more = "";
+            try {
+                response = await client.GetAsync( link.Url );
             }
+            catch (Exception ex ) {
+                if ( ex.InnerException != null )
+                    more = ex.InnerException.Message;
+                response = new HttpResponseMessage(HttpStatusCode.Ambiguous);
+            }
+
+            Console.ForegroundColor = response.IsSuccessStatusCode ? ConsoleColor.Green : ConsoleColor.Red;
+            Console.Write( "  [{0}]", (int) response.StatusCode );
+            Console.ForegroundColor = original;
+            Console.WriteLine( $" {link.Url}" );
+
+            if ( debug && !response.IsSuccessStatusCode ) {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine( $"--> {response.ReasonPhrase}" );
+                Console.WriteLine( $"--> Request:\n'{response.RequestMessage.ToString()}'" );
+                Console.WriteLine( $"--> Response:\n{response.ToString()}" );
+                string content = await response.Content.ReadAsStringAsync();
+                Console.WriteLine( $"--> Content:\n{content}" );
+                Console.ForegroundColor = original;
+            }
+
+            if ( !string.IsNullOrWhiteSpace(more) ) {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"  --> {more}");
+                Console.ForegroundColor = original;
+            }
+
+            return response.IsSuccessStatusCode;
         }
     }
 }
