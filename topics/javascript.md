@@ -13,6 +13,8 @@
 | Documentation | npm.org | [NPM documentation](https://docs.npmjs.com/) |
 | ES2017 | ECMA international | [ES2017 spec (PDF)](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf) |
 | Framework overview | todomvc.com |[Todo MVC](http://todomvc.com/) |
+| Security | npmjs.com | [Running security audits](https://docs.npmjs.com/getting-started/running-a-security-audit) |
+| | StackOverflow | [ Proper way to fix security vulnerability defined in package-lock.json](https://stackoverflow.com/questions/49582891/proper-way-to-fix-potential-security-vulnerability-in-a-dependency-defined-in-pa#answer-52121338) |
 
 ## TypeScript
 
