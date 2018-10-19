@@ -7,7 +7,7 @@ if [ ${#files} -eq 0 ]; then
 fi
 
 echo Link checker - pre-commit hook
-./test.sh $files 1>/dev/null
+./test.sh $files --minimal --debug
 if [ $? -ne 0 ]; then
     exit 1
 else
