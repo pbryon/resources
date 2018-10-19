@@ -188,6 +188,9 @@ namespace TestLinks
             Console.WriteLine( $" {link.Url}" );
 
             if ( debug && !response.IsSuccessStatusCode ) {
+                response.RequestMessage = response.RequestMessage ?? new HttpRequestMessage();
+                response.Content = response.Content ?? new ByteArrayContent(new byte[] { });
+
                 Console.ForegroundColor = YELLOW;
                 Console.WriteLine( $"--> {response.ReasonPhrase}" );
                 Console.WriteLine( $"--> Request:\n'{response.RequestMessage.ToString()}'" );
