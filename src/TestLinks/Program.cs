@@ -14,6 +14,27 @@ namespace TestLinks
         private static HttpClient client = new HttpClient();
         private static bool debug = false;
 
+        /// <summary>
+        /// <see cref="Console.Error"/>
+        /// </summary>
+        private static readonly TextWriter STD_ERR = Console.Error;
+        /// <summary>
+        /// The original <see cref="Console.ForegroundColor"/> at startup.
+        /// </summary>
+        private static readonly ConsoleColor ORIGINAL_COLOR = Console.ForegroundColor;
+        /// <summary>
+        /// <see cref="ConsoleColor.Red"/>
+        /// </summary>
+        private static readonly ConsoleColor RED = ConsoleColor.Red;
+        /// <summary>
+        /// <see cref="ConsoleColor.Yellow"/>
+        /// </summary>
+        private static readonly ConsoleColor YELLOW = ConsoleColor.Yellow;
+        /// <summary>
+        /// <see cref="ConsoleColor.Green"/>
+        /// </summary>
+        private static readonly ConsoleColor GREEN = ConsoleColor.Green;
+
         static async Task Main(string[] args)
         {
             SetupHttpClient();
@@ -25,8 +46,6 @@ namespace TestLinks
             List<string> broken;
             List<Link> links;
             string name;
-
-            TextWriter stderr = Console.Error;
 
             foreach( var topic in topics ) {
                 broken = new List<string>();
@@ -46,9 +65,9 @@ namespace TestLinks
                     continue;
                 }
 
-                stderr.WriteLine( $"--> broken links for '{name}':" );
+                STD_ERR.WriteLine( $"--> broken links for '{name}':" );
                 foreach( var link in broken ) {
-                    stderr.WriteLine( $"  {link}" );
+                    STD_ERR.WriteLine( $"  {link}" );
                 }
             }
 
@@ -112,7 +131,7 @@ namespace TestLinks
             var topics = Path.Combine( root, "topics" );
 
             if ( !Directory.Exists( topics ) ) {
-                Console.WriteLine( "Directory not found: {0}", topics );
+                STD_ERR.WriteLine( "Directory not found: {0}", topics );
                 Environment.Exit(1);
             }
             return topics;
@@ -150,8 +169,6 @@ namespace TestLinks
 
         private static async Task<bool> LinkWorks( Link link )
         {
-            var original = Console.ForegroundColor;
-
             HttpResponseMessage response;
             string more = "";
             try {
@@ -163,25 +180,25 @@ namespace TestLinks
                 response = new HttpResponseMessage(HttpStatusCode.Ambiguous);
             }
 
-            Console.ForegroundColor = response.IsSuccessStatusCode ? ConsoleColor.Green : ConsoleColor.Red;
+            Console.ForegroundColor = response.IsSuccessStatusCode ? GREEN : RED;
             Console.Write( "  [{0}]", (int) response.StatusCode );
-            Console.ForegroundColor = original;
+            Console.ForegroundColor = ORIGINAL_COLOR;
             Console.WriteLine( $" {link.Url}" );
 
             if ( debug && !response.IsSuccessStatusCode ) {
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = YELLOW;
                 Console.WriteLine( $"--> {response.ReasonPhrase}" );
                 Console.WriteLine( $"--> Request:\n'{response.RequestMessage.ToString()}'" );
                 Console.WriteLine( $"--> Response:\n{response.ToString()}" );
                 string content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine( $"--> Content:\n{content}" );
-                Console.ForegroundColor = original;
+                Console.ForegroundColor = ORIGINAL_COLOR;
             }
 
             if ( !string.IsNullOrWhiteSpace(more) ) {
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = YELLOW;
                 Console.WriteLine($"  --> {more}");
-                Console.ForegroundColor = original;
+                Console.ForegroundColor = ORIGINAL_COLOR;
             }
 
             return response.IsSuccessStatusCode;
