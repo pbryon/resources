@@ -102,7 +102,7 @@ namespace TestLinks
                 Console.Write(" for topics:");
 
                 foreach ( var arg in args ) {
-                    Console.Write("{0} {1}", first ? "" : ",", arg);
+                    Console.Write("{0} {1}", first ? "" : ",", Path.GetFileNameWithoutExtension(arg) );
                     first = false;
                 }
             }
