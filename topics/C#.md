@@ -6,6 +6,7 @@
 * [Web frameworks](#web-frameworks)
 * [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
 * [CI/CD](#cicd)
+* [NuGet packages](#nuget-packages)
 
 ## C# general
 | Topic | Source | URL |
@@ -106,3 +107,9 @@
 | CI | Microsoft Docs | [Using .NET Core SDK and tools in Continuous Integration](https://docs.microsoft.com/en-us/dotnet/core/tools/using-ci-with-cli) |
 | Travis CI | Travis docs | [Building a C#, F# or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/) |
 | | Andrew Lock | [Adding Travis CI to a a .Net Core app](https://andrewlock.net/adding-travis-ci-to-a-net-core-app/) |
+
+## NuGet packages
+
+| Use case | Name |
+| --- | --- |
+| Import external assembly Views | [AUR.NetCore.Mvc.PluginsManager](https://www.nuget.org/packages/AUR.NETCore.Mvc.PluginsManager/1.0.0#) |
