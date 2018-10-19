@@ -143,6 +143,7 @@ namespace TestLinks
             string link = @"\[(.+)\]\((.+)\)";
             string anchor = @"#.*$";
             string text, name, url;
+            bool hasDomainName = false;
             Match match;
 
             using( var reader = File.OpenText(file)) {
@@ -153,8 +154,9 @@ namespace TestLinks
                         name = match.Groups[1].Value;
                         url = match.Groups[2].Value;
                         match = match.NextMatch();
+                        hasDomainName = url.Split(".").Length > 1;
 
-                        if ( !url.StartsWith( "http" ) )
+                        if ( !url.StartsWith( "http" ) && !hasDomainName )
                             continue;
 
                         if ( Regex.IsMatch( url, anchor ) )
