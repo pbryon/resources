@@ -122,7 +122,7 @@ namespace TestLinks
         {
             var links = new List<Link>();
             string link = @"\[(.+)\]\((.+)\)";
-            string anchor = @"#.+$";
+            string anchor = @"#.*$";
             string text, name, url;
             Match match;
 
