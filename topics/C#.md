@@ -37,11 +37,12 @@
 | | Npgsql Docs | [Getting Started \[with PostgreSQL\]](http://www.npgsql.org/efcore/index.html) |
 | Deployment | Microsoft Docs | [Configuring a database server for web deploy publishing](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing)|
 | | Microsoft Docs | [Deploying database projects](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects) |
-| Fluid API | Scott Sauber | [Configuring EF Core 2.0 with IEntityTypeConfiguration](https://scottsauber.com/2017/09/11/customizing-ef-core-2-0-with-ientitytypeconfiguration/) |
+| Fluent API | Scott Sauber | [Configuring EF Core 2.0 with IEntityTypeConfiguration](https://scottsauber.com/2017/09/11/customizing-ef-core-2-0-with-ientitytypeconfiguration/) |
 | | Microsoft Docs | [Cascade Delete](https://docs.microsoft.com/en-us/ef/core/saving/cascade-delete) |
 | Migrations | Brice Lambson | [How to use EFCore Migrations with layers](https://github.com/bricelam/Sample-SplitMigrations) |
 | | Microsoft Docs | [Diesng-Time DbContext Creation](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dbcontext-creation) |
 | | Andrei Dzimchuk | [Managing database schema and seeding data with EF Core migrations](https://dzimchuk.net/managing-database-schema-and-seeding-data-with-ef-core-migrations/) |
+| Shadow properties | StackOverflow | [Turning off shadow property generation](https://stackoverflow.com/questions/51127947/turning-off-shadow-property-generation) |
 | Testing| Microsoft Docs | [Implementing the Repository and Unit of Work patterns](https://docs.microsoft.com/en-gb/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) |
 | | Microsoft Docs | [Repository pattern benefits](https://msdn.microsoft.com/en-us/library/ff649690.aspx) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
