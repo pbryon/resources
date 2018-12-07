@@ -9,3 +9,11 @@
 | Rebasing | git-scm | [Git rebase](https://git-scm.com/docs/git-rebase) |
 | Remotes | git-scm | [Git remote](https://git-scm.com/docs/git-remote) |
 | Subtree | Atlassian Blog | [Git subtree: the alternative to Git submodule](https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree) |
+
+## Environment-specific
+
+Specific git flows depending on environment.
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Unity3D | ThoughtBot.com | [How to Git with Unity](https://robots.thoughtbot.com/how-to-git-with-unity) |
