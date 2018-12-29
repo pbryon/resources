@@ -7,7 +7,7 @@
 | Diff-index | git-scm | [git diff-index](https://git-scm.com/docs/git-diff-index/1.7.9) |
 | Hooks | githooks.com | [git hooks](https://githooks.com/) |
 | | codeinthehole.com | [Tips for pre-commit hooks](https://codeinthehole.com/tips/tips-for-using-a-git-pre-commit-hook/) |
-| | git-scm | [git hooks](https://git-scm.com/book/uz/v2/Customizing-git-git-Hooks) |
+| | git-scm | [git hooks](https://git-scm.com/book/uz/v2/Customizing-Git-Git-Hooks) |
 | Reset | git-scm | [git reset](https://git-scm.com/docs/git-reset) |
 | Rebasing | git-scm | [git rebase](https://git-scm.com/docs/git-rebase) |
 | | Algolia | [Master the rebase (and the other way around)](https://blog.algolia.com/master-git-rebase/) |
