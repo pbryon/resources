@@ -6,9 +6,11 @@ Learning resources I've used across programming languages
 
 - [bash](./topics/bash.md)
 - [C#](./topics/C%23.md)
+- [DevOps](./topics/devops.md)
 - [git](./topics/git.md)
 - [JavaScript](./topics/javascript.md)
 - [PowerShell](./topics/PowerShell.md)
+- [Unity3D](./topics/unity3d.md)
 - [Visual Studio Extensions](./topics/vs-extensions.md)
 - [(Web) standards](./topics/standards.md)
 
