@@ -1,11 +1,11 @@
 namespace TestLinks
 {
-    class Link
+    internal class Link
     {
         public string Text { get; private set; }
         public string Url { get; private set; }
 
-        public Link ( string text, string url )
+        public Link(string text, string url)
         {
             Text = text;
             Url = url;

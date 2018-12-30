@@ -24,16 +24,16 @@ namespace TestLinks
             var output = new List<string>();
             Match match;
 
-            foreach ( string arg in args ) {
+            foreach (string arg in args) {
                 match = Regex.Match(arg, @"^-{1,2}(.+)$");
-                if ( !match.Success ) {
+                if (!match.Success) {
                     output.Add(arg);
                     continue;
                 }
 
                 string flag = match.Groups[1].Value;
 
-                switch ( flag ) {
+                switch (flag) {
                     case "verbose":
                         level |= LogLevel.Verbose;
                         break;
@@ -53,4 +53,4 @@ namespace TestLinks
             return output.ToArray();
         }
     }
-    }
+}

@@ -4,13 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace TestLinks
 {
-    class Program
+    internal class Program
     {
         private static HttpClient client = new HttpClient();
         private static LogLevel logLevel = LogLevel.Verbose;
@@ -36,7 +35,7 @@ namespace TestLinks
         /// </summary>
         private static readonly ConsoleColor GREEN = ConsoleColor.Green;
 
-        static async Task Main(string[] args)
+        private static async Task Main(string[] args)
         {
             SetupHttpClient();
             args = logLevel.ApplyFlags(args);
@@ -49,32 +48,23 @@ namespace TestLinks
             List<Link> links;
             string name;
 
-            foreach ( var topic in topics ) {
+            foreach (var topic in topics) {
                 broken = new List<string>();
                 name = Path.GetFileNameWithoutExtension(topic);
 
-                if (!logLevel.IsQuiet())
-                    Console.WriteLine($"\nTopic '{name}':");
+                WriteTopicIntro(name);
 
                 links = await ParseLinks(topic);
-                foreach ( var link in links ) {
-                    if ( await LinkWorks(link) )
+                foreach (var link in links) {
+                    if (await LinkWorks(link))
                         continue;
 
                     broken.Add(link.Text);
                     hadError = true;
                 }
 
-                if ( broken.Count == 0 ) {
-                    if ( !logLevel.IsQuiet() )
-                        Console.WriteLine("--> topic OK");
-                    continue;
-                }
 
-                STD_ERR.WriteLine($"--> broken links for '{name}':");
-                foreach ( var link in broken ) {
-                    STD_ERR.WriteLine($"  {link}");
-                }
+                WriteTopicStatus(name, broken);
             }
 
             Environment.Exit(hadError ? 1 : 0);
@@ -89,20 +79,20 @@ namespace TestLinks
 
         private static void WriteIntro(IEnumerable<string> args)
         {
-            if ( !logLevel.IsVerbose() )
+            if (!logLevel.IsVerbose())
                 return;
 
-            if ( args.Count() == 1 )
+            if (args.Count() == 1)
                 return;
 
             Console.Write("Checking topic links");
 
             bool first = true;
-            if ( args.Count() > 0 ) {
+            if (args.Count() > 0) {
                 Console.Write(" for topics:");
 
-                foreach ( var arg in args ) {
-                    Console.Write("{0} {1}", first ? "" : ",", Path.GetFileNameWithoutExtension(arg) );
+                foreach (var arg in args) {
+                    Console.Write("{0} {1}", first ? "" : ",", Path.GetFileNameWithoutExtension(arg));
                     first = false;
                 }
             }
@@ -116,13 +106,13 @@ namespace TestLinks
             var output = new List<string>();
             var search = new List<string>();
 
-            foreach ( string arg in args ) {
+            foreach (string arg in args) {
                 search.Add(Path.GetFileNameWithoutExtension(arg));
             }
 
-            foreach ( var file in Directory.EnumerateFiles(GetTopicDir(), "*.md") ) {
+            foreach (var file in Directory.EnumerateFiles(GetTopicDir(), "*.md")) {
                 basename = Path.GetFileNameWithoutExtension(file);
-                if ( args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower()) )
+                if (args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower()))
                     output.Add(file);
             }
             return output;
@@ -131,14 +121,14 @@ namespace TestLinks
         private static string GetTopicDir()
         {
             string src = AppDomain.CurrentDomain.BaseDirectory;
-            while ( !src.EndsWith("src") ) {
+            while (!src.EndsWith("src")) {
                 src = Directory.GetParent(src).ToString();
             }
 
             var root = Directory.GetParent(src).ToString();
             var topics = Path.Combine(root, "topics");
 
-            if ( !Directory.Exists(topics) ) {
+            if (!Directory.Exists(topics)) {
                 STD_ERR.WriteLine("Directory not found: {0}", topics);
                 Environment.Exit(1);
             }
@@ -154,23 +144,23 @@ namespace TestLinks
             bool hasDomainName = false;
             Match match;
 
-            using ( var reader = File.OpenText(file) ) {
+            using (var reader = File.OpenText(file)) {
                 text = await reader.ReadToEndAsync();
-                foreach ( string line in text.Split('\n') ) {
+                foreach (string line in text.Split('\n')) {
                     match = Regex.Match(line, link);
-                    while ( match.Success ) {
+                    while (match.Success) {
                         name = match.Groups[1].Value;
                         url = match.Groups[2].Value;
                         match = match.NextMatch();
                         hasDomainName = url.Split('.').Length > 1;
 
-                        if ( !hasDomainName )
+                        if (!hasDomainName)
                             continue;
 
-                        if ( !url.StartsWith("http") )
+                        if (!url.StartsWith("http"))
                             url = $"http://{url}";
 
-                        if ( Regex.IsMatch(url, anchor) )
+                        if (Regex.IsMatch(url, anchor))
                             url = Regex.Replace(url, anchor, "");
 
                         links.Add(new Link(name, url));
@@ -187,7 +177,7 @@ namespace TestLinks
             try {
                 response = await client.GetAsync(link.Url);
             }
-            catch ( Exception ex ) {
+            catch (Exception ex) {
                 error = ex;
                 response = new HttpResponseMessage(HttpStatusCode.BadRequest) {
                     Content = new StringContent(""),
@@ -203,7 +193,10 @@ namespace TestLinks
 
         private static void ShowLinkStatus(Link link, HttpResponseMessage response)
         {
-            if ( response.IsSuccessStatusCode && !logLevel.IsVerbose() )
+            if (logLevel.IsMinimal())
+                Console.Write(".");
+
+            if (response.IsSuccessStatusCode && !logLevel.IsVerbose())
                 return;
 
             Console.ForegroundColor = response.IsSuccessStatusCode ? GREEN : RED;
@@ -214,10 +207,10 @@ namespace TestLinks
 
         private static async Task ShowLinkDebug(Link link, HttpResponseMessage response, Exception ex)
         {
-            if ( response.IsSuccessStatusCode )
+            if (response.IsSuccessStatusCode)
                 return;
 
-            if ( !logLevel.IsDebug() )
+            if (!logLevel.IsDebug())
                 return;
 
             response.RequestMessage = response.RequestMessage ?? new HttpRequestMessage();
@@ -228,21 +221,21 @@ namespace TestLinks
             WritePadded(indent, response.ToString(), "Response");
 
             string content = "";
-            if ( response.Content != null)
+            if (response.Content != null)
                 content = await response.Content.ReadAsStringAsync();
 
-            WritePadded(indent, content, "Content" );
+            WritePadded(indent, content, "Content");
             Console.ForegroundColor = ORIGINAL_COLOR;
 
             string message = ex.InnerException?.Message ?? ex.Message;
-            if ( !string.IsNullOrWhiteSpace(message) ) {
+            if (!string.IsNullOrWhiteSpace(message)) {
                 Console.ForegroundColor = YELLOW;
                 WritePadded(indent, message, "Exception");
                 Console.ForegroundColor = ORIGINAL_COLOR;
             }
         }
 
-        private static void WritePadded( string prefix, string text, string header = null )
+        private static void WritePadded(string prefix, string text, string header = null)
         {
             Console.WriteLine($"{prefix} {header}:");
             string indent = new string(' ', prefix.Length + 3);
@@ -250,9 +243,50 @@ namespace TestLinks
                 .Replace(", ", ",\n")
                 .Split('\n');
 
-            foreach ( string line in  lines ) {
+            foreach (string line in lines) {
                 Console.WriteLine($"{indent}{line}");
             }
+        }
+
+        private static void WriteTopicIntro(string topic)
+        {
+            if (logLevel.IsQuiet())
+                return;
+
+            string message = $"Topic '{topic}'";
+
+            if (logLevel.IsMinimal()) {
+                Console.Write($"{message}..");
+                return;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine($"{message}:");
+        }
+
+        private static void WriteTopicStatus(string topic, List<string> brokenLinks)
+        {
+            if (logLevel.IsQuiet())
+                return;
+
+            if (brokenLinks.Count > 0) {
+                if (logLevel.IsQuiet())
+                    Console.WriteLine();
+                STD_ERR.WriteLine($"--> broken links for '{topic}':");
+
+                foreach (var link in brokenLinks) {
+                    STD_ERR.WriteLine($"  {link}");
+                }
+
+                return;
+            }
+
+            if (logLevel.IsMinimal()) {
+                Console.WriteLine(" OK");
+                return;
+            }
+
+            Console.WriteLine("--> topic OK");
         }
     }
 }
