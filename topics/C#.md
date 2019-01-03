@@ -36,6 +36,7 @@
 | Validation | odetocode.com | [Manual validation with data annotations](https://odetocode.com/blogs/scott/archive/2011/06/29/manual-validation-with-data-annotations.aspx) |
 | Visual Studio | Microsoft Docs | [Shortcuts in Visual Studio](https://msdn.microsoft.com/en-us/library/da5kh0wa.aspx) |
 | | Microsoft Docs | [Using the Task List](https://msdn.microsoft.com/en-us/library/txtwdysk.aspx) |
+| YamlDotNet | cyotek.com | [Using custom type converters with YamlDotNet - Part 1](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-1) and [Part 2](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-2) |
 
 ## Testing
 
