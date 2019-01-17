@@ -14,6 +14,7 @@
 | Remotes | git-scm | [git remote](https://git-scm.com/docs/git-remote) |
 | Staging | git-scm | [git tools - interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) |
 | Subtree | Atlassian Blog | [git subtree: the alternative to git submodule](https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree) |
+| Tagging | git-scm | [git basics - tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) |
 | update-index | git-scm | [git update-index](https://git-scm.com/docs/git-update-index) |
 
 ## git providers
