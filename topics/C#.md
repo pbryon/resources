@@ -74,7 +74,6 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| Async| MSDN blogs | [Asynchronous Repositories](https://blogs.msdn.microsoft.com/mrtechnocal/2014/03/16/asynchronous-repositories/) |
 | | CodeGuru | [Performing Asynchronous Operations using Entity Framework](http://www.codeguru.com/csharp/.net/net_framework/performing-asynchronous-operations-using-entity-framework.htm) |
 | Databases | CodeProject | [Storing complex properties as JSON](https://www.codeproject.com/Articles/1166099/Entity-Framework-Storing-complex-properties-as-JSO) |
 | | Microsoft Docs | [MSSQL Connection Strings](https://msdn.microsoft.com/en-us/library/jj653752(v=vs.110).aspx) |
