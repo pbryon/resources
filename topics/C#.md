@@ -75,6 +75,7 @@
 | | | [CommandLineUtils - Arguments](https://natemcmaster.github.io/CommandLineUtils/docs/arguments.html?tabs=using-attributes) |
 | | | [CommandLineUtils - integration with generic Host](https://natemcmaster.github.io/CommandLineUtils/docs/advanced/generic-host.html) |
 | | Andrew Lock | [Using dependency injection in a .NET Core console app](https://andrewlock.net/using-dependency-injection-in-a-net-core-console-application/) |
+| .NET global tools | Microsoft Docs | [Create a global tool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools-how-to-create) |
 
 ## Entity Framework Core (EF core)
 
