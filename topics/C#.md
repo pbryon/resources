@@ -4,6 +4,7 @@
 * [Testing](#testing)
 * [Logging](#logging)
 * [MSBuild](#msbuild)
+* [Console applications](#cli)
 * [Entity Framework Core](#entity-framework-core-ef-core)
 * [.NET Core MVC](#net-core-mvc)
 * [Web frameworks](#web-frameworks)
@@ -15,11 +16,6 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| Console apps | GitHub | [CommandLineUtils](https://natemcmaster.github.io/CommandLineUtils/docs/intro.html) |
-| | | [CommandLineUtils - Options](https://natemcmaster.github.io/CommandLineUtils/docs/options.html?tabs=using-attributes) |
-| | | [CommandLineUtils - Arguments](https://natemcmaster.github.io/CommandLineUtils/docs/arguments.html?tabs=using-attributes) |
-| | | [CommandLineUtils - integration with generic Host](https://natemcmaster.github.io/CommandLineUtils/docs/advanced/generic-host.html) |
-| | Andrew Lock | [Using dependency injection in a .NET Core console app](https://andrewlock.net/using-dependency-injection-in-a-net-core-console-application/) |
 | Documentation | Microsoft Docs | [XML Documentation Comments](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) |
 | Delegates | MSDN | [Funct<T, TResult> Delegate](https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx) |
 | Generics | Erip Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
@@ -69,6 +65,16 @@
 | Tasks | Microsoft Docs | [Message task](https://docs.microsoft.com/en-us/visualstudio/msbuild/message-task?view=vs-2017) |
 | | | [Copy Task](https://docs.microsoft.com/en-us/visualstudio/msbuild/copy-task?view=vs-2017) |
 | | GitHub | [.NET Core - Tasks named "AfterBuild" and "AfterPublish" are ignore](https://github.com/dotnet/cli/issues/8304) |
+
+## CLI
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Console apps | GitHub | [CommandLineUtils](https://natemcmaster.github.io/CommandLineUtils/docs/intro.html) |
+| | | [CommandLineUtils - Options](https://natemcmaster.github.io/CommandLineUtils/docs/options.html?tabs=using-attributes) |
+| | | [CommandLineUtils - Arguments](https://natemcmaster.github.io/CommandLineUtils/docs/arguments.html?tabs=using-attributes) |
+| | | [CommandLineUtils - integration with generic Host](https://natemcmaster.github.io/CommandLineUtils/docs/advanced/generic-host.html) |
+| | Andrew Lock | [Using dependency injection in a .NET Core console app](https://andrewlock.net/using-dependency-injection-in-a-net-core-console-application/) |
 
 ## Entity Framework Core (EF core)
 
