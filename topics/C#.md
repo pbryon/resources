@@ -167,6 +167,11 @@
 
 ## NuGet packages
 
-| Use case | Name |
-| --- | --- |
-| Import external assembly Views | [AUR.NetCore.Mvc.PluginsManager](https://www.nuget.org/packages/AUR.NETCore.Mvc.PluginsManager/1.0.0#) |
+| Topic | Source | URL |
+| --- | --- | --- |
+| NuGet | Microsoft Docs | [Quickstart: Create and publish a package (dotnet CLI)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli) |
+| | | [NuGet config file](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) |
+| .nuspec | Microsoft Docs | [Creating the .nuspec file](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#creating-the-nuspec-file) |
+| | | [.nuspec reference](https://docs.microsoft.com/en-us/nuget/reference/nuspec) |
+| | | [Replacement tokens](https://docs.microsoft.com/en-gb/nuget/reference/nuspec#replacement-tokens) |
+| | | [.nuspec - including content files](https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-content-files) |
