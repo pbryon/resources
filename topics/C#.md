@@ -3,6 +3,7 @@
 * [C# General](#c-general)
 * [Testing](#testing)
 * [Logging](#logging)
+* [Serialization](#serialization)
 * [MSBuild](#msbuild)
 * [Console applications](#cli)
 * [Entity Framework Core](#entity-framework-core-ef-core)
@@ -53,6 +54,12 @@
 | Serilog | serilog.net | [Serilog.net](https://serilog.net/) |
 |  | Github| [Serilog.Sinks.Console](https://github.com/serilog/serilog-sinks-console) |
 |  | Blog | [Logging scopes and exceptions](https://andrewlock.net/how-to-include-scopes-when-logging-exceptions-in-asp-net-core/) |
+
+## Serialization
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| YamlDotNet | cyotek.com | Using custom type converters with C# and YamlDotNet [part 1](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-1) and [part 2](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-2)|
 
 ## MSBuild
 
