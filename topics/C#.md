@@ -1,5 +1,7 @@
 ## Contents
 
+[top]: #contents
+
 * [C# General](#c-general)
 * [Testing](#testing)
 * [Logging](#logging)
@@ -37,6 +39,8 @@
 | YamlDotNet | cyotek.com | [Using custom type converters with YamlDotNet - Part 1](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-1) and [Part 2](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-2) |
 | | GitHub | [Serialize comments](https://github.com/aaubry/YamlDotNet/issues/152) |
 
+[Back to top][top]
+
 ## Testing
 
 | Topic | Source | URL |
@@ -48,6 +52,8 @@
 | | Andrew Lock | [Using parameterised tests in xUnit](https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/) |
 | | Brendan Connolly | [Organizing tests with xUnit Traits](http://www.brendanconnolly.net/organizing-tests-with-xunit-traits/) |
 
+[Back to top][top]
+
 ## Logging
 
 | Topic | Source | URL |
@@ -56,11 +62,15 @@
 |  | Github| [Serilog.Sinks.Console](https://github.com/serilog/serilog-sinks-console) |
 |  | Blog | [Logging scopes and exceptions](https://andrewlock.net/how-to-include-scopes-when-logging-exceptions-in-asp-net-core/) |
 
+[Back to top][top]
+
 ## Serialization
 
 | Topic | Source | URL |
 | --- | --- | --- |
 | YamlDotNet | cyotek.com | Using custom type converters with C# and YamlDotNet [part 1](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-1) and [part 2](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-2)|
+
+[Back to top][top]
 
 ## MSBuild
 
@@ -74,6 +84,8 @@
 | | | [Copy Task](https://docs.microsoft.com/en-us/visualstudio/msbuild/copy-task?view=vs-2017) |
 | | GitHub | [.NET Core - Tasks named "AfterBuild" and "AfterPublish" are ignore](https://github.com/dotnet/cli/issues/8304) |
 
+[Back to top][top]
+
 ## CLI
 
 | Topic | Source | URL |
@@ -85,6 +97,8 @@
 | | Andrew Lock | [Using dependency injection in a .NET Core console app](https://andrewlock.net/using-dependency-injection-in-a-net-core-console-application/) |
 | .NET global tools | Microsoft Docs | [Create a global tool](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools-how-to-create) |
 | | Nate McMaster | [.NET Core Global tools and gotchas](https://natemcmaster.com/blog/2018/02/02/dotnet-global-tool/) |
+
+[Back to top][top]
 
 ## Entity Framework Core (EF core)
 
@@ -106,6 +120,8 @@
 | | Microsoft Docs | [Repository pattern benefits](https://msdn.microsoft.com/en-us/library/ff649690.aspx) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
 | | Stormpath | [Tutorial: Using Entity Framework Core as an In-Memory Database for ASP.NET Core](https://stormpath.com/blog/tutorial-entity-framework-core-in-memory-database-asp-net-core) |
+
+[Back to top][top]
 
 ## .NET Core MVC
 
@@ -147,6 +163,7 @@
 | | Microsoft Docs | [View Components](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components) |
 | | Microsoft Docs | [Serving static files](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files) |
 
+[Back to top][top]
 
 ## Classic ASP.NET
 
@@ -154,6 +171,9 @@
 | --- | --- | --- |
 | Application config | Microsoft Docs | [Web Deploy Parameterization](https://docs.microsoft.com/en-us/iis/publish/using-web-deploy/web-deploy-parameterization) |
 | | | [Configuring parameters for Web Package Deployment](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment) |
+
+
+[Back to top][top]
 
 ## Web frameworks
 
@@ -165,11 +185,15 @@
 | Single Page Applications | GitHub | [AspNetCore JavaScriptServices documentation](https://github.com/aspnet/JavaScriptServices) |
 | Webpack | Microsoft docs | [Using SignalR with Webpack and TypeScript](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-2.1&tabs=visual-studio) |
 
+[Back to top][top]
+
 ## Windows Presentation Foundation (WPF)
 
 | Topic | Source | URL |
 | --- | --- | --- |
 | Tutorials | Microsoft Docs | [My first WPF desktop application](https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application) |
+
+[Back to top][top]
 
 ## CI/CD
 
@@ -179,6 +203,8 @@
 | CI | Microsoft Docs | [Using .NET Core SDK and tools in Continuous Integration](https://docs.microsoft.com/en-us/dotnet/core/tools/using-ci-with-cli) |
 | Travis CI | Travis docs | [Building a C#, F# or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/) |
 | | Andrew Lock | [Adding Travis CI to a a .Net Core app](https://andrewlock.net/adding-travis-ci-to-a-net-core-app/) |
+
+[Back to top][top]
 
 ## NuGet packages
 
@@ -190,3 +216,6 @@
 | | | [.nuspec reference](https://docs.microsoft.com/en-us/nuget/reference/nuspec) |
 | | | [Replacement tokens](https://docs.microsoft.com/en-gb/nuget/reference/nuspec#replacement-tokens) |
 | | | [.nuspec - including content files](https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-content-files) |
+
+[Back to top][top]
+
