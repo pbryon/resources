@@ -8,6 +8,7 @@
 * [Console applications](#cli)
 * [Entity Framework Core](#entity-framework-core-ef-core)
 * [.NET Core MVC](#net-core-mvc)
+* [Classic ASP.NET](#classic-asp-net)
 * [Web frameworks](#web-frameworks)
 * [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
 * [CI/CD](#cicd)
@@ -146,6 +147,12 @@
 | | Microsoft Docs | [View Components](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components) |
 | | Microsoft Docs | [Serving static files](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files) |
 
+
+## Classic ASP.NET
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Application config | Microsoft Docs | [Web Deploy Parameterization](https://docs.microsoft.com/en-us/iis/publish/using-web-deploy/web-deploy-parameterization) |
 
 ## Web frameworks
 
