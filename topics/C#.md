@@ -210,6 +210,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Project dependencies | jerriepelser.com | [Analyzing project dependencies part 1](https://www.jerriepelser.com/blog/analyze-dotnet-project-dependencies-part-1/) |
 | NuGet | Microsoft Docs | [Quickstart: Create and publish a package (dotnet CLI)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli) |
 | | | [NuGet config file](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) |
 | .nuspec | Microsoft Docs | [Creating the .nuspec file](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#creating-the-nuspec-file) |
