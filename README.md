@@ -12,6 +12,7 @@ Learning resources I've used across programming languages
 - [PowerShell](./topics/PowerShell.md)
 - [Unity3D](./topics/unity3d.md)
 - [Visual Studio Extensions](./topics/vs-extensions.md)
+- [Visual Studio Code extensions](./topics/vscode-extensions.md)
 - [(Web) standards](./topics/standards.md)
 
 # Checking dead links
