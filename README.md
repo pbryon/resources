@@ -10,6 +10,7 @@ Learning resources I've used across programming languages
 - [git](./topics/git.md)
 - [JavaScript](./topics/javascript.md)
 - [PowerShell](./topics/PowerShell.md)
+- [SVG](./topics/svg.md)
 - [Unity3D](./topics/unity3d.md)
 - [Visual Studio Extensions](./topics/vs-extensions.md)
 - [Visual Studio Code extensions](./topics/vscode-extensions.md)
