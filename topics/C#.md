@@ -10,6 +10,7 @@
 * [Console applications](#cli)
 * [Entity Framework Core](#entity-framework-core-ef-core)
 * [.NET Core MVC](#net-core-mvc)
+* [Blazor](#blazor)
 * [Classic ASP.NET](#classic-asp-net)
 * [Web frameworks](#web-frameworks)
 * [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
@@ -135,7 +136,6 @@
 | | humankode.com | [Develop Locally with HTTPS, Self-Signed Certificates and ASP.NET Core](https://www.humankode.com/asp-net-core/develop-locally-with-https-self-signed-certificates-and-asp-net-core) |
 | | blinkingcaret.com | [HTTPS in ASP.NET Core from scratch](https://www.blinkingcaret.com/2017/03/01/https-asp-net-core/) |
 | Middleware | Microsoft Docs | [ASP.NET Core Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware) |
-| Razor components | Microsoft Docs | [Create and use ASP.NET Core Razor components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components?view=aspnetcore-3.0) |
 | Razor pages| Microsoft Docs | [Getting started with Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) |
 | | learnrazorpages.com | [Friendly Routes](https://www.learnrazorpages.com/razor-pages/routing#friendly-routes) |
 | Security | Microsoft Docs | [Overview of ASP.NET Core Security](https://docs.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-2.1) |
@@ -163,6 +163,14 @@
 | | Microsoft Docs | [Authoring Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/authoring) |
 | | Microsoft Docs | [View Components](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/view-components) |
 | | Microsoft Docs | [Serving static files](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files) |
+
+[Back to top][top]
+
+## Blazor
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Razor components | Microsoft Docs | [Create and use ASP.NET Core Razor components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components?view=aspnetcore-3.0) |
 
 [Back to top][top]
 
