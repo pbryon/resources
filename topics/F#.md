@@ -20,7 +20,9 @@ If you're new to the use of F# or functional programming, see these talks.
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| Official guide | Microsoft docs | [F# Guide](https://docs.microsoft.com/en-us/dotnet/fsharp/?view=vs-2019) |
+| Official guides | Microsoft docs | [F# Guide](https://docs.microsoft.com/en-us/dotnet/fsharp/?view=vs-2019) |
 | | | [Tour of F#](https://docs.microsoft.com/en-us/dotnet/fsharp/tour) |
+| | | [Introduction to Functional Programming in F#](https://docs.microsoft.com/en-us/dotnet/fsharp/introduction-to-functional-programming/index) |
+| Idiomatic F# | Microsoft docs| [F# style guide](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/) |
 
 [Back to top][top]
