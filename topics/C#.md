@@ -170,6 +170,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| General | Microsoft Docs | [Hosting models](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-3.0) |
 | Razor components | Microsoft Docs | [Create and use ASP.NET Core Razor components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components?view=aspnetcore-3.0) |
 
 [Back to top][top]
