@@ -7,6 +7,7 @@ Learning resources I've used across programming languages
 - [bash](./topics/bash.md)
 - [C#](./topics/C%23.md)
 - [DevOps](./topics/devops.md)
+- [F#](./topics/F%23.md)
 - [git](./topics/git.md)
 - [JavaScript](./topics/javascript.md)
 - [PowerShell](./topics/PowerShell.md)
