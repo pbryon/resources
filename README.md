@@ -16,6 +16,7 @@ Learning resources I've used across programming languages
 - [Visual Studio Extensions](./topics/vs-extensions.md)
 - [Visual Studio Code extensions](./topics/vscode-extensions.md)
 - [(Web) standards](./topics/standards.md)
+- [Xamarin](./topics/xamarin.md)
 
 # Checking dead links
 
