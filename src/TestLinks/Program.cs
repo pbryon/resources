@@ -37,7 +37,6 @@ namespace TestLinks
 
         private static async Task Main(string[] args)
         {
-            args = new[] {"xamarin"};
             SetupHttpClient();
             args = logLevel.ApplyFlags(args);
 
