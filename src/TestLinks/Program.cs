@@ -37,6 +37,7 @@ namespace TestLinks
 
         private static async Task Main(string[] args)
         {
+            args = new[] {"xamarin"};
             SetupHttpClient();
             args = logLevel.ApplyFlags(args);
 
@@ -146,7 +147,11 @@ namespace TestLinks
 
             using (var reader = File.OpenText(file)) {
                 text = await reader.ReadToEndAsync();
-                foreach (string line in text.Split('\n')) {
+                foreach (string line in text.Split('\n'))
+                {
+                    if (line.StartsWith("-"))
+                        continue;
+
                     match = Regex.Match(line, link);
                     while (match.Success) {
                         name = match.Groups[1].Value;
