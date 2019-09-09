@@ -228,6 +228,8 @@ namespace TestLinks
             if (response.Content != null)
                 content = await response.Content.ReadAsStringAsync();
 
+            content = $"{content.Substring(0, 500)} [...]";
+
             WritePadded(indent, content, "Content");
             Console.ForegroundColor = ORIGINAL_COLOR;
 
