@@ -13,7 +13,6 @@
 | | Algolia | [Master the rebase (and the other way around)](https://blog.algolia.com/master-git-rebase/) |
 | Remotes | git-scm | [git remote](https://git-scm.com/docs/git-remote) |
 | Staging | git-scm | [git tools - interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) |
-| Subtree | Atlassian Blog | [git subtree: the alternative to git submodule](https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree) |
 | Tagging | git-scm | [git basics - tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) |
 | update-index | git-scm | [git update-index](https://git-scm.com/docs/git-update-index) |
 | | StackOverflow | [How can I make git ignore future revisions to a file?](https://stackoverflow.com/questions/4348590/how-can-i-make-git-ignore-future-revisions-to-a-file) |
