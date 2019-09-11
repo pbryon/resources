@@ -3,6 +3,7 @@
 [top]: #contents
 
 - [Android development](#android-development)
+- [Frameworks](#frameworks)
 - [Layout tricks](#layout-tricks)
 - [Xamarin.Forms](#xamarin.forms)
 
@@ -35,5 +36,13 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Badges | Xamarin forums | [How to make a rounded Shape label](https://forums.xamarin.com/discussion/108728/how-to-make-rounded-shape-label-in-cross-platform-with-xamarin-form-uwp-app) |
+
+[Back to top][top]
+
+## Frameworks
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| FreshMVVM | michaelridland.com | [FreshMvvm Quick Start Guide](https://michaelridland.com/xamarin/freshmvvm-quick-start-guide/) |
 
 [Back to top][top]
