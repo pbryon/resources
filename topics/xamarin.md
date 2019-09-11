@@ -26,6 +26,7 @@
 | | xamarinhelp.com | [Registering a URI Scheme](https://xamarinhelp.com/uri-scheme/) |
 | | xamarinhelp.com | [Xamarin.iOS Universal Links](https://xamarinhelp.com/ios-universal-links/) |
 | Layouts | Microsoft docs | [Xamarin.Forms layouts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/layouts) |
+| Tabs | Microsoft docs | [Xamarin.Forms Tabbed Page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/tabbed-page) |
 
 [Back to top][top]
 
