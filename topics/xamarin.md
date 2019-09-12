@@ -13,6 +13,7 @@
 | --- | --- | --- |
 | Debugging on a device | Microsoft Docs | [Debug on Device](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) | 
 | | Microsoft Docs | [Set Up Device for Development](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/set-up-device-for-development) |
+| Resources | Microsoft Docs | [Android Resources](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/resources-in-android) |
 
 [Back to top][top]
 
