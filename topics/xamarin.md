@@ -23,6 +23,7 @@
 | --- | --- | --- |
 | Controls | Microsoft docs | [Xamarin.Forms Views](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views) |
 | | xamarinhelp.com | [Xamarin Forms ListView Grouping](https://xamarinhelp.com/xamarin-forms-listview-grouping/) |
+| | Microsoft docs | [ListView Appearance](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance) |
 | Gesture recognizers | Microsoft docs | [Adding a tap gesture recognizer](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/gestures/tap) |
 | Hot Reload | c-sharpcorner.com | [How to Start Hot Reloading in XAML](https://www.c-sharpcorner.com/article/how-to-start-the-hot-reloading-in-xaml/) |
 | Navigation | xamarinhelp.com | [Xamarin Forms Deep Linking and App Indexing with AppLinks](https://xamarinhelp.com/xamarin-forms-applinks) |
