@@ -23,7 +23,7 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Resources | Microsoft Docs | [Images and Icons in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons) |
-| | Microsoft devblogs | [Using custom Fonts in Xamarin.iOS](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/) |
+| | csharpcorner.com | [Xamarin iOS Custom fonts](https://www.c-sharpcorner.com/blogs/xamarin-ios-custom-fonts) |
 
 [Back to top][top]
 
