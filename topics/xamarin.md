@@ -3,6 +3,7 @@
 [top]: #contents
 
 - [Android development](#android-development)
+- [iOS development](#ios-development)
 - [Frameworks](#frameworks)
 - [Layout tricks](#layout-tricks)
 - [Xamarin.Forms](#xamarin.forms)
@@ -16,6 +17,15 @@
 | Resources | Microsoft Docs | [Android Resources](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/resources-in-android) |
 
 [Back to top][top]
+
+## iOS development
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Resources | Microsoft Docs | [Images and Icons in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons) |
+
+[Back to top][top]
+
 
 ## Xamarin.Forms
 
