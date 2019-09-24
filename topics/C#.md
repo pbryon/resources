@@ -25,6 +25,7 @@
 | Delegates | MSDN | [Funct<T, TResult> Delegate](https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx) |
 | Generics | Erip Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
 | HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://msdn.microsoft.com/en-us/library/ms256471(v=vs.110).aspx)|
+| Identity | Andrew Lock | [Introduction to Authentication with ASP.NET Core](https://andrewlock.net/introduction-to-authentication-with-asp-net-core) |
 | Iterators | Ray Chen | The implementation of iterators and their consequences [(Part 1)](https://blogs.msdn.microsoft.com/oldnewthing/20080812-00/?p=21273/) [(Part 2)](https://blogs.msdn.microsoft.com/oldnewthing/20080813-00/?p=21253) [(Part 3)](https://blogs.msdn.microsoft.com/oldnewthing/20080814-00/?p=21243) [(Part 4)](https://blogs.msdn.microsoft.com/oldnewthing/20080815-00/?p=21223/) |
 | LINQ | Microsoft Docs | [Getting started with LINQ](https://msdn.microsoft.com/en-us/library/bb397933.aspx) |
 | Operators | Microsoft Docs | [Using indexers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/using-indexers) |
