@@ -43,6 +43,7 @@
 | | xamarinhelp.com | [Xamarin.iOS Universal Links](https://xamarinhelp.com/ios-universal-links/) |
 | Layouts | Microsoft docs | [Xamarin.Forms layouts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/layouts) |
 | Page layout | xamarinhelp.com | [Xamarin Forms Page Templates](https://xamarinhelp.com/xamarin-forms-page-templates/) |
+| Performance | Microsoft docs | [Improve Xamarin.Forms App Performance](https://docs.microsoft.com/en-gb/xamarin/xamarin-forms/deploy-test/performance) |
 | Tabs | Microsoft docs | [Xamarin.Forms Tabbed Page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/tabbed-page) |
 
 [Back to top][top]
