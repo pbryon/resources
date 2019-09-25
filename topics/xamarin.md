@@ -7,6 +7,7 @@
 - [Frameworks](#frameworks)
 - [Layout tricks](#layout-tricks)
 - [Xamarin.Forms](#xamarin.forms)
+- [Custom controls](#custom-controls)
 
 ## Android development
 
@@ -61,5 +62,13 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | FreshMVVM | michaelridland.com | [FreshMvvm Quick Start Guide](https://michaelridland.com/xamarin/freshmvvm-quick-start-guide/) |
+
+[Back to top][top]
+
+## Custom controls
+
+| URL | Description |
+| --- | --- |
+| [DynamicStackLayout](https://github.com/SuavePirate/DynamicStackLayout) | A horizontally scrolling StackLayout | []
 
 [Back to top][top]
