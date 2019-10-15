@@ -23,6 +23,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Permissions | Microsoft Docs | [iOS Security and Privacy Features](https://docs.microsoft.com/en-gb/xamarin/ios/app-fundamentals/security-privacy) |
 | Resources | Microsoft Docs | [Images and Icons in Xamarin.iOS](https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/images-icons) |
 | | csharpcorner.com | [Xamarin iOS Custom fonts](https://www.c-sharpcorner.com/blogs/xamarin-ios-custom-fonts) |
 
