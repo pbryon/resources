@@ -55,6 +55,7 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Badges | Xamarin forums | [How to make a rounded Shape label](https://forums.xamarin.com/discussion/108728/how-to-make-rounded-shape-label-in-cross-platform-with-xamarin-form-uwp-app) |
+| File picker | C# corner | [How to create a file picker in Xamarin.Forms](https://www.c-sharpcorner.com/article/how-to-create-file-picker-in-xamarin-forms/)
 
 [Back to top][top]
 
@@ -70,6 +71,7 @@
 
 | URL | Description |
 | --- | --- |
-| [DynamicStackLayout](https://github.com/SuavePirate/DynamicStackLayout) | A horizontally scrolling StackLayout | []
+| [DynamicStackLayout](https://github.com/SuavePirate/DynamicStackLayout) | A horizontally scrolling StackLayout |
+| [Xaml.Plugin.FilePicker](https://www.nuget.org/packages/Xamarin.Plugin.FilePicker/) | A cross-platform file picker |
 
 [Back to top][top]
