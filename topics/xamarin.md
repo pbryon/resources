@@ -55,6 +55,7 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Badges | Xamarin forums | [How to make a rounded Shape label](https://forums.xamarin.com/discussion/108728/how-to-make-rounded-shape-label-in-cross-platform-with-xamarin-form-uwp-app) |
+| DisplayAlert styling | Xamarin forums | [DisplayAlert and DisplayActionSheet styling](https://forums.xamarin.com/discussion/29168/displayalert-and-displayactionsheet-styling) |
 | File picker | C# corner | [How to create a file picker in Xamarin.Forms](https://www.c-sharpcorner.com/article/how-to-create-file-picker-in-xamarin-forms/)
 
 [Back to top][top]
