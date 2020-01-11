@@ -2,6 +2,7 @@
 
 [top]: #contents
 
+- [Evangelism](#evangelism)
 - [F# basics](#f-basics)
 - [Functional programming](#functional-programming)
 
@@ -25,8 +26,7 @@ If you're new to the use of F# or functional programming, see these talks.
 | | | [Tour of F#](https://docs.microsoft.com/en-us/dotnet/fsharp/tour) |
 | | | [Introduction to Functional Programming in F#](https://docs.microsoft.com/en-us/dotnet/fsharp/introduction-to-functional-programming/index) |
 | Idiomatic F# | Microsoft docs| [F# style guide](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/) |
-
-
+| Productivity | brandewinder.com | [10 Tips for Productive F# scripting](https://brandewinder.com/2016/02/06/10-fsharp-scripting-tips/) |
 [Back to top][top]
 
 ## Functional programming
