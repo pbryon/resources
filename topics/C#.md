@@ -1,21 +1,21 @@
-## Contents
+# C#
 
 [top]: #contents
 
-* [C# General](#c-general)
-* [Testing](#testing)
-* [Logging](#logging)
-* [Serialization](#serialization)
-* [MSBuild](#msbuild)
-* [Console applications](#cli)
-* [Entity Framework Core](#entity-framework-core-ef-core)
-* [.NET Core MVC](#net-core-mvc)
-* [Blazor](#blazor)
-* [Classic ASP.NET](#classic-asp-net)
-* [Web frameworks](#web-frameworks)
-* [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-* [CI/CD](#cicd)
-* [NuGet packages](#nuget-packages)
+- [C# general](#c-general)
+- [Testing](#testing)
+- [Logging](#logging)
+- [Serialization](#serialization)
+- [MSBuild](#msbuild)
+- [CLI](#cli)
+- [Entity Framework Core (EF core)](#entity-framework-core-ef-core)
+- [.NET Core MVC](#net-core-mvc)
+- [Blazor](#blazor)
+- [Classic ASP.NET](#classic-aspnet)
+- [Web frameworks](#web-frameworks)
+- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
+- [CI/CD](#cicd)
+- [NuGet packages](#nuget-packages)
 
 ## C# general
 
@@ -23,7 +23,7 @@
 | --- | --- | --- |
 | Documentation | Microsoft Docs | [XML Documentation Comments](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) |
 | Delegates | MSDN | [Funct<T, TResult> Delegate](https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx) |
-| Generics | Erip Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
+| Generics | Eric Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
 | HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://msdn.microsoft.com/en-us/library/ms256471(v=vs.110).aspx)|
 | Identity | Andrew Lock | [Introduction to Authentication with ASP.NET Core](https://andrewlock.net/introduction-to-authentication-with-asp-net-core) |
 | | | identityserver.io | [Quickstart Overview](http://docs.identityserver.io/en/latest/quickstarts/0_overview.html) |
