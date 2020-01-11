@@ -3,6 +3,7 @@
 Convenient extensions for Visual Studio Code.
 
 * [General extensions](#general-extensions)
+* [Language extensions](#language-extensions)
 * [Frontend extensions](#frontend-extensions)
 * [Themes](#themes)
 * [Sources](#sources)
@@ -21,6 +22,12 @@ Convenient extensions for Visual Studio Code.
 | [Path IntelliSense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) | Enables auto-complete on filenames |
 | [Sensitive replace](https://marketplace.visualstudio.com/items?itemName=vilicvane.sensitive-replace) | Replace selections while preserving case |
 | [Unique lines](https://marketplace.visualstudio.com/items?itemName=bibhasdn.unique-lines) | Removes duplicates from a selection of lines |
+
+## Language extensions
+
+| Name | Language |
+| --- | --- |
+| Ionide | F# |
 
 ## Frontend extensions
 
