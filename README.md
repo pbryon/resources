@@ -1,5 +1,7 @@
 # resources
 
+![](https://github.com/pbryon/resources/workflows/checklinks/badge.svg)
+
 Learning resources I've used across programming languages
 
 # Topics (see topics folder)
