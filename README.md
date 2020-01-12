@@ -1,6 +1,6 @@
 # resources
 
-![](https://github.com/pbryon/resources/workflows/checklinks/badge.svg)
+![](https://github.com/pbryon/resources/workflows/check-links/badge.svg)
 
 Learning resources I've used across programming languages
 

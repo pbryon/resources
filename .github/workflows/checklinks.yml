@@ -1,4 +1,4 @@
-name: Check links
+name: check-links
 on: [push]
 jobs:
   run:
@@ -10,11 +10,14 @@ jobs:
     steps:
     - name: git checkout
       uses: actions/checkout@v1
+    - name: debug environment
+      run: |
+        echo $LINKS_PROJECT
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
     - name: dotnet build
-      run: dotnet build --configuration Release $LINKS_PROJECT
+      run: dotnet build --nologo --configuration Release $LINKS_PROJECT
     - name: dotnet run
-      run: dotnet run $LINKS_PROJECT
+      run: dotnet run --nologo --project $LINKS_PROJECT
