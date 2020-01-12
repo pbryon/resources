@@ -5,6 +5,7 @@
 - [Evangelism](#evangelism)
 - [F# basics](#f-basics)
 - [Functional programming](#functional-programming)
+- [SAFE stack](#safe-stack)
 
 ## Evangelism
 
@@ -34,5 +35,14 @@ If you're new to the use of F# or functional programming, see these talks.
 | Topic | Source | URL |
 | --- | --- | --- |
 | FP concepts | FSharpForFunAndProfit | The [Thinking Functionally](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) series |
+
+[Back to top][top]
+
+## SAFE stack
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Tutorial | safe-stack.github.io | [Quick Start](https://safe-stack.github.io/docs/quickstart/) |
+| | safe-stack.github.io | [Learning resources](https://safe-stack.github.io/docs/learning/) |
 
 [Back to top][top]
