@@ -44,5 +44,5 @@ If you're new to the use of F# or functional programming, see these talks.
 | --- | --- | --- |
 | Tutorial | safe-stack.github.io | [Quick Start](https://safe-stack.github.io/docs/quickstart/) |
 | | safe-stack.github.io | [Learning resources](https://safe-stack.github.io/docs/learning/) |
-
+| | MSDN Magazine | [SAFE Stack: Functional Web Programming for .NET Core](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/october/fsharp-safe-stack-functional-web-programming-for-net-core) |
 [Back to top][top]
