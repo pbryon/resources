@@ -182,6 +182,7 @@
 | --- | --- | --- |
 | Application config | Microsoft Docs | [Web Deploy Parameterization](https://docs.microsoft.com/en-us/iis/publish/using-web-deploy/web-deploy-parameterization) |
 | | | [Configuring parameters for Web Package Deployment](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment) |
+| Dependency Injection | Autofac docs | [Adapters and Decorators](https://autofac.readthedocs.io/en/latest/advanced/adapters-decorators.html) |
 
 
 [Back to top][top]
