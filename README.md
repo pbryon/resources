@@ -6,6 +6,7 @@ Learning resources I've used across programming languages
 
 # Topics (see topics folder)
 
+- [Azure](./topics/azure.md)
 - [bash](./topics/bash.md)
 - [C#](./topics/C%23.md)
 - [DevOps](./topics/devops.md)
