@@ -122,6 +122,7 @@
 | | Microsoft Docs | [Repository pattern benefits](https://msdn.microsoft.com/en-us/library/ff649690.aspx) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
 | | Stormpath | [Tutorial: Using Entity Framework Core as an In-Memory Database for ASP.NET Core](https://stormpath.com/blog/tutorial-entity-framework-core-in-memory-database-asp-net-core) |
+| Views | Microsoft Docs | [Keyless entity types](https://docs.microsoft.com/en-us/ef/core/modeling/keyless-entity-types) |
 
 [Back to top][top]
 
