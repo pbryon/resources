@@ -15,4 +15,4 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: dotnet run
-      run: dotnet run --nologo --project $LINKS_PROJECT
+      run: dotnet run --no-logo --project $LINKS_PROJECT
