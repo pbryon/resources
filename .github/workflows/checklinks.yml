@@ -4,7 +4,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     env:
-      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 0
       LINKS_PROJECT: "src/TestLinks"
     steps:
@@ -15,4 +15,4 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: dotnet run
-      run: dotnet run --no-logo --project $LINKS_PROJECT
+      run: dotnet run --project $LINKS_PROJECT
