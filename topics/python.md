@@ -29,5 +29,8 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Tutotrial | datacamp.com | [Python Numpy Array Tutorial](https://www.datacamp.com/community/tutorials/python-numpy-tutorial) |
+| Data types | scipy.org | [Data types](https://docs.scipy.org/doc/numpy/user/basics.types.html) |
+| Visualization | datacamp.com | [How to visualize numpy arrays](https://www.datacamp.com/community/tutorials/python-numpy-tutorial#how-to-visualize-numpy-arrays) |
 
 [Back to top][top]
