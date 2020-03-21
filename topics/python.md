@@ -12,13 +12,16 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Classes | Python docs | [Classes](https://docs.python.org/3/tutorial/classes.html) |
-| | | [`@classmethod`](https://docs.python.org/3/library/functions.html#classmethod) |
-| | | [`@staticmethod`](https://docs.python.org/3/library/functions.html#staticmethod) |
+| | StackExchange | [Is it ok to have multiple classes in the same file in Python](https://softwareengineering.stackexchange.com/questions/306486/is-it-ok-to-have-multiple-classes-in-the-same-file-in-python#answer-306492)
 | | journaldev.com | [`__str__()` and `__repr__()` functions](https://www.journaldev.com/22460/python-str-repr-functions) |
-| | Python docs | [`pass` statement](https://docs.python.org/3/reference/simple_stmts.html#the-pass-statement) |
+| Decorators | | [`@classmethod`](https://docs.python.org/3/library/functions.html#classmethod) |
+| | | [`@property`](https://docs.python.org/3/library/functions.html#property) |
+| | | [`@staticmethod`](https://docs.python.org/3/library/functions.html#staticmethod) |
 | Iterators | Python docs | [Iterators](https://docs.python.org/3/tutorial/classes.html#iterators) |
 | Modules | StackOverflow | [What is `__init__.py` for?](https://stackoverflow.com/questions/448271/what-is-init-py-for) |
-| Syntax | techbeamers.com | [Multi-line statement in Python](https://www.techbeamers.com/understand-python-statement-indentation/#how-to-use-multiline-statement) |
+| Quotes | towardsdatascience.com | [Single, double and triple quotes in Python](https://towardsdatascience.com/single-double-and-triple-quotes-in-python-7ceea990baf) |
+| Statements | techbeamers.com | [Multi-line statement in Python](https://www.techbeamers.com/understand-python-statement-indentation/#how-to-use-multiline-statement) |
+| | Python docs | [`pass` statement](https://docs.python.org/3/reference/simple_stmts.html#the-pass-statement) |
 
 [Back to top][top]
 
