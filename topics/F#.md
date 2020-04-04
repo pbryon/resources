@@ -6,6 +6,7 @@
 - [F# basics](#f-basics)
 - [Functional programming](#functional-programming)
 - [SAFE stack](#safe-stack)
+- [Paket](#paket)
 
 ## Evangelism
 
@@ -46,5 +47,14 @@ If you're new to the use of F# or functional programming, see these talks.
 | | safe-stack.github.io | [Learning resources](https://safe-stack.github.io/docs/learning/) |
 | | MSDN Magazine | [SAFE Stack: Functional Web Programming for .NET Core](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/october/fsharp-safe-stack-functional-web-programming-for-net-core) |
 | Elmish | compositional-it.com | [UI programming with Elmish in F#](https://www.compositional-it.com/news-blog/ui-programming-with-elmish-in-f/) |
+| | Zaid Ajaj | [The Elmish Book](https://zaid-ajaj.github.io/the-elmish-book/#/) |
+
+[Back to top][top]
+
+## Paket
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Dependencies | fsprojects.github.io | [The paket.dependencies file](https://fsprojects.github.io/Paket/dependencies-file.html) |
 
 [Back to top][top]
