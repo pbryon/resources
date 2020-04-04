@@ -56,5 +56,6 @@ If you're new to the use of F# or functional programming, see these talks.
 | Topic | Source | URL |
 | --- | --- | --- |
 | Dependencies | fsprojects.github.io | [The paket.dependencies file](https://fsprojects.github.io/Paket/dependencies-file.html) |
+| | | [Paket and .NET CLI](https://fsprojects.github.io/Paket/paket-and-dotnet-cli.html) |
 
 [Back to top][top]
