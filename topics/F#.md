@@ -49,6 +49,8 @@ If you're new to the use of F# or functional programming, see these talks.
 | | MSDN Magazine | [SAFE Stack: Functional Web Programming for .NET Core](https://docs.microsoft.com/en-us/archive/msdn-magazine/2019/october/fsharp-safe-stack-functional-web-programming-for-net-core) |
 | Elmish | compositional-it.com | [UI programming with Elmish in F#](https://www.compositional-it.com/news-blog/ui-programming-with-elmish-in-f/) |
 | | Zaid Ajaj | [The Elmish Book](https://zaid-ajaj.github.io/the-elmish-book/#/) |
+| Feliz | Zaid Ajaj | [Feliz documentation](https://zaid-ajaj.github.io/Feliz) |
+| | Roman Provazník | [Feliz.Bulma documentation](https://dzoukr.github.io/Feliz.Bulma) |
 
 [Back to top][top]
 
