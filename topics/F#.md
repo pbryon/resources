@@ -27,6 +27,7 @@ If you're new to the use of F# or functional programming, see these talks.
 | Official guides | Microsoft docs | [F# Guide](https://docs.microsoft.com/en-us/dotnet/fsharp/?view=vs-2019) |
 | | | [Tour of F#](https://docs.microsoft.com/en-us/dotnet/fsharp/tour) |
 | | | [Introduction to Functional Programming in F#](https://docs.microsoft.com/en-us/dotnet/fsharp/introduction-to-functional-programming/index) |
+| Functions | Microsoft docs | [Inline functions](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/functions/inline-functions) |
 | Idiomatic F# | Microsoft docs| [F# style guide](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/) |
 | | | [F# coding conventions](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/conventions) |
 | Productivity | brandewinder.com | [10 Tips for Productive F# scripting](https://brandewinder.com/2016/02/06/10-fsharp-scripting-tips/) |
