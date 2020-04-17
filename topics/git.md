@@ -23,3 +23,4 @@
 | --- | --- | --- |
 | GitHub | github.com | [GitHub Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
 | | | [Creating and highlighting code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/) |
+| | opensource.com | [How to create a pull request in GitHub](https://opensource.com/article/19/7/create-pull-request-github)
