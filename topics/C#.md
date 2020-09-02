@@ -2,20 +2,21 @@
 
 [top]: #contents
 
-- [C# general](#c-general)
-- [Testing](#testing)
-- [Logging](#logging)
-- [Serialization](#serialization)
-- [MSBuild](#msbuild)
-- [CLI](#cli)
-- [Entity Framework Core (EF core)](#entity-framework-core-ef-core)
-- [.NET Core MVC](#net-core-mvc)
-- [Blazor](#blazor)
-- [Classic ASP.NET](#classic-aspnet)
-- [Web frameworks](#web-frameworks)
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-- [CI/CD](#cicd)
-- [NuGet packages](#nuget-packages)
+- [C](#c)
+  - [C# general](#c-general)
+  - [Testing](#testing)
+  - [Logging](#logging)
+  - [Serialization](#serialization)
+  - [MSBuild](#msbuild)
+  - [CLI](#cli)
+  - [Entity Framework Core (EF core)](#entity-framework-core-ef-core)
+  - [.NET Core MVC](#net-core-mvc)
+  - [Blazor](#blazor)
+  - [Classic ASP.NET](#classic-aspnet)
+  - [Web frameworks](#web-frameworks)
+  - [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
+  - [CI/CD](#cicd)
+  - [NuGet packages](#nuget-packages)
 
 ## C# general
 
@@ -36,6 +37,7 @@
 | | | [Character classes in Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions) |
 | Scaffolding | MSDN Blogs | [Creating a custom scaffolder for Visual Studio](https://blogs.msdn.microsoft.com/webdev/2014/04/03/creating-a-custom-scaffolder-for-visual-studio/) |
 | Spans | MSDN | [All about Span: exploring a new .NET mainstay](https://msdn.microsoft.com/en-us/magazine/mt814808.aspx) |
+| Style enforcement | documentation.help | [StyleCop rules](https://documentation.help/StyleCop/StyleCop%20Rules.html) |
 | Validation | odetocode.com | [Manual validation with data annotations](https://odetocode.com/blogs/scott/archive/2011/06/29/manual-validation-with-data-annotations.aspx) |
 | Visual Studio | Microsoft Docs | [Shortcuts in Visual Studio](https://msdn.microsoft.com/en-us/library/da5kh0wa.aspx) |
 | | Microsoft Docs | [Using the Task List](https://msdn.microsoft.com/en-us/library/txtwdysk.aspx) |
