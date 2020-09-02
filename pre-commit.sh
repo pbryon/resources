@@ -3,6 +3,7 @@
 files=$(git diff-index --cached --name-only --diff-filter=ACMR HEAD | grep topics)
 error=0
 if [ ${#files} -eq 0 ]; then
+    echo "git diff-index had non-zero exit code!"
     exit 0
 fi
 
