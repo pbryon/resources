@@ -26,6 +26,7 @@
 | | computerhope.com | [ Hungarian notation prefixes](https://www.computerhope.com/jargon/h/hungarian-notation.htm#hungarian) |
 | Documentation | Microsoft Docs | [XML Documentation Comments](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) |
 | Delegates | MSDN | [Funct<T, TResult> Delegate](https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx) |
+| Garbage collection | GitHub | [.NET memory performance analysis](https://github.com/Maoni0/mem-doc/blob/master/doc/.NETMemoryPerformanceAnalysis.md) |
 | Generics | Eric Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
 | HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://msdn.microsoft.com/en-us/library/ms256471(v=vs.110).aspx)|
 | Identity | Andrew Lock | [Introduction to Authentication with ASP.NET Core](https://andrewlock.net/introduction-to-authentication-with-asp-net-core) |
