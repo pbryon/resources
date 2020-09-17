@@ -24,25 +24,25 @@
 | --- | --- | --- |
 | Code style | documentation.help | [StyleCop rules](https://documentation.help/StyleCop/StyleCop%20Rules.html) |
 | | computerhope.com | [ Hungarian notation prefixes](https://www.computerhope.com/jargon/h/hungarian-notation.htm#hungarian) |
-| Documentation | Microsoft Docs | [XML Documentation Comments](https://msdn.microsoft.com/en-us/library/b2s063f7.aspx) |
-| Delegates | MSDN | [Funct<T, TResult> Delegate](https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx) |
+| Documentation | Microsoft Docs | [XML Documentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc) |
+| Delegates | MSDN | [Funct<T, TResult> Delegate](https://docs.microsoft.com/en-us/dotnet/api/system.func-2) |
 | Garbage collection | GitHub | [.NET memory performance analysis](https://github.com/Maoni0/mem-doc/blob/master/doc/.NETMemoryPerformanceAnalysis.md) |
 | Generics | Eric Lippert | [Why are generics not inherited?](https://ericlippert.com/2013/07/15/why-are-generic-constraints-not-inherited/) |
-| HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://msdn.microsoft.com/en-us/library/ms256471(v=vs.110).aspx)|
+| HtmlAgilityPack | Microsoft Docs | [XPath syntax](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))|
 | Identity | Andrew Lock | [Introduction to Authentication with ASP.NET Core](https://andrewlock.net/introduction-to-authentication-with-asp-net-core) |
 | | | identityserver.io | [Quickstart Overview](http://docs.identityserver.io/en/latest/quickstarts/0_overview.html) |
 | Iterators | Ray Chen | The implementation of iterators and their consequences [(Part 1)](https://blogs.msdn.microsoft.com/oldnewthing/20080812-00/?p=21273/) [(Part 2)](https://blogs.msdn.microsoft.com/oldnewthing/20080813-00/?p=21253) [(Part 3)](https://blogs.msdn.microsoft.com/oldnewthing/20080814-00/?p=21243) [(Part 4)](https://blogs.msdn.microsoft.com/oldnewthing/20080815-00/?p=21223/) |
-| LINQ | Microsoft Docs | [Getting started with LINQ](https://msdn.microsoft.com/en-us/library/bb397933.aspx) |
+| LINQ | Microsoft Docs | [Getting started with LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |
 | Operators | Microsoft Docs | [Using indexers](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/using-indexers) |
 | | | [Implicit keyword](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/implicit) |
 | Patterns | Visual Studio magazine | [Pattern matching in C# 7.0 case blocks](https://visualstudiomagazine.com/articles/2017/02/01/pattern-matching.aspx) |
 | RegEx | Microsoft Docs | [Best practices for Regular Expressions in .NET](https://docs.microsoft.com/en-us/dotnet/standard/base-types/best-practices) |
 | | | [Character classes in Regular Expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-classes-in-regular-expressions) |
 | Scaffolding | MSDN Blogs | [Creating a custom scaffolder for Visual Studio](https://blogs.msdn.microsoft.com/webdev/2014/04/03/creating-a-custom-scaffolder-for-visual-studio/) |
-| Spans | MSDN | [All about Span: exploring a new .NET mainstay](https://msdn.microsoft.com/en-us/magazine/mt814808.aspx) |
+| Spans | MSDN | [All about Span: exploring a new .NET mainstay](https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/january/csharp-all-about-span-exploring-a-new-net-mainstay) |
 | Validation | odetocode.com | [Manual validation with data annotations](https://odetocode.com/blogs/scott/archive/2011/06/29/manual-validation-with-data-annotations.aspx) |
-| Visual Studio | Microsoft Docs | [Shortcuts in Visual Studio](https://msdn.microsoft.com/en-us/library/da5kh0wa.aspx) |
-| | Microsoft Docs | [Using the Task List](https://msdn.microsoft.com/en-us/library/txtwdysk.aspx) |
+| Visual Studio | Microsoft Docs | [Shortcuts in Visual Studio](https://docs.microsoft.com/en-gb/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio) |
+| | Microsoft Docs | [Using the Task List](https://docs.microsoft.com/en-gb/visualstudio/ide/using-the-task-list) |
 | YamlDotNet | cyotek.com | [Using custom type converters with YamlDotNet - Part 1](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-1) and [Part 2](https://www.cyotek.com/blog/using-custom-type-converters-with-csharp-and-yamldotnet-part-2) |
 | | GitHub | [Serialize comments](https://github.com/aaubry/YamlDotNet/issues/152) |
 
@@ -112,7 +112,7 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Databases | CodeProject | [Storing complex properties as JSON](https://www.codeproject.com/Articles/1166099/Entity-Framework-Storing-complex-properties-as-JSO) |
-| | Microsoft Docs | [MSSQL Connection Strings](https://msdn.microsoft.com/en-us/library/jj653752(v=vs.110).aspx) |
+| | Microsoft Docs | [Connection String Syntax](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/connection-string-syntax) |
 | | Npgsql Docs | [Getting Started \[with PostgreSQL\]](http://www.npgsql.org/efcore/index.html) |
 | Deployment | Microsoft Docs | [Configuring a database server for web deploy publishing](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing)|
 | | Microsoft Docs | [Deploying database projects](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects) |
@@ -123,7 +123,7 @@
 | | Andrei Dzimchuk | [Managing database schema and seeding data with EF Core migrations](https://dzimchuk.net/managing-database-schema-and-seeding-data-with-ef-core-migrations/) |
 | Shadow properties | StackOverflow | [Turning off shadow property generation](https://stackoverflow.com/questions/51127947/turning-off-shadow-property-generation) |
 | Testing| Microsoft Docs | [Implementing the Repository and Unit of Work patterns](https://docs.microsoft.com/en-gb/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application) |
-| | Microsoft Docs | [Repository pattern benefits](https://msdn.microsoft.com/en-us/library/ff649690.aspx) |
+| | Microsoft Docs | [Repository pattern benefits](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff649690(v=pandp.10)) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
 | | Stormpath | [Tutorial: Using Entity Framework Core as an In-Memory Database for ASP.NET Core](https://stormpath.com/blog/tutorial-entity-framework-core-in-memory-database-asp-net-core) |
 | Views | Microsoft Docs | [Keyless entity types](https://docs.microsoft.com/en-us/ef/core/modeling/keyless-entity-types) |
@@ -163,7 +163,7 @@
 | Tutorials | Microsoft Docs | [Contoso University](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/) |
 | | Microsoft Docs | [Building Your First Web API with ASP.NET Core MVC and Visual Studio](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api) |
 | | Microsoft Docs| [Music Store](https://github.com/aspnet/MusicStore)|
-| Validation | Microsoft Docs | [System.ComponentModel.DataAnnotations namespace](https://msdn.microsoft.com/en-us/library/system.componentmodel.dataannotations(v=vs.110).aspx)
+| Validation | Microsoft Docs | [System.ComponentModel.DataAnnotations namespace](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations)
 |  | Microsoft Docs | [Model validation in ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation) |
 | Views | Microsoft Docs | [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro) |
 | | StackOverflow | [TagHelpers not rendering](https://stackoverflow.com/questions/46388336/dotnet-core-2-0-taghelper-is-not-rendered#answer-46403680) |
@@ -200,7 +200,7 @@
 | Angular | okta.com | [Build a CRUD App with ASP.NET Core and Angular](https://developer.okta.com/blog/2018/04/26/build-crud-app-aspnetcore-angular) |
 | SignalR | Microsoft Docs | [Introduction to ASP.NET Core SignalR](https://docs.microsoft.com/en-gb/aspnet/core/tutorials/signalr?view=aspnetcore-3.1) |
 | | | [Use Hubs in SignalR for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-3.1) |
-| | MSDN Magazine | [Discovering ASP.NET Core SignalR](https://msdn.microsoft.com/en-us/magazine/mt846469.aspx) |
+| | MSDN Magazine | [Discovering ASP.NET Core SignalR](https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/april/cutting-edge-discovering-asp-net-core-signalr) |
 | Single Page Applications | GitHub | [AspNetCore JavaScriptServices documentation](https://github.com/aspnet/JavaScriptServices) |
 | Webpack | Microsoft docs | [Using SignalR with Webpack and TypeScript](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-2.1&tabs=visual-studio) |
 
