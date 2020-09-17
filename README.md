@@ -15,6 +15,7 @@ Learning resources I've used across programming languages
 - [JavaScript](./topics/javascript.md)
 - [PowerShell](./topics/PowerShell.md)
 - [Python](./topics/python.md)
+- [SQL](./topics/sql.md)
 - [SVG](./topics/svg.md)
 - [Unity3D](./topics/unity3d.md)
 - [Visual Studio Extensions](./topics/vs-extensions.md)
