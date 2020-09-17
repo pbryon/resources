@@ -25,7 +25,7 @@ Learning resources I've used across programming languages
 
 # Checking dead links
 
-If you don't have .NET Core 2.0 installed, see [the prerequisites](https://docs.microsoft.com/en-us/dotnet/core/install/dependencies).
+If you don't have .NET Core installed, see [the prerequisites](https://docs.microsoft.com/en-us/dotnet/core/install/dependencies).
 
 The `pre-commit.sh` script is a git pre-commit hook. Simply copy it to `.git/hooks/pre-commit` and it will check any changed topic files' links automatically through `test.sh`.
 
