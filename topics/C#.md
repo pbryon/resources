@@ -22,6 +22,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Async | Microsoft DevBlogs | [ConfigureAwait FAQ](https://devblogs.microsoft.com/dotnet/configureawait-faq/) |
 | Code style | documentation.help | [StyleCop rules](https://documentation.help/StyleCop/StyleCop%20Rules.html) |
 | | computerhope.com | [ Hungarian notation prefixes](https://www.computerhope.com/jargon/h/hungarian-notation.htm#hungarian) |
 | Documentation | Microsoft Docs | [XML Documentation Comments](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/xmldoc) |
