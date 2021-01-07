@@ -56,7 +56,7 @@
 | Fluent assertions | NFluent | [NFluent](http://www.n-fluent.net/) |
 | Mocking | GitHub | [Moq Quickstart](https://github.com/Moq/moq4/wiki/Quickstart) |
 | NUnit | NUnit docs | [NUnit Documentation](https://github.com/nunit/docs/wiki/NUnit-Documentation) |
-| xUnit | xUnit docs | [Getting started with xUnit](https://xunit.github.io/docs/getting-started-desktop#add-xunit-runner-ref) |
+| xUnit | xUnit docs | [Getting started with xUnit](https://xunit.net/docs/getting-started/netfx/visual-studio) |
 | | Andrew Lock | [Using parameterised tests in xUnit](https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/) |
 | | Brendan Connolly | [Organizing tests with xUnit Traits](http://www.brendanconnolly.net/organizing-tests-with-xunit-traits/) |
 
