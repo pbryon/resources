@@ -4,8 +4,9 @@
 
 [top]: #contents
 
-* [Basics](#python-basics)
-* [Numpy](#numpy)
+- [Python](#python)
+  - [Python basics](#python-basics)
+  - [Numpy](#numpy)
 
 ## Python basics
 
@@ -18,6 +19,7 @@
 | | | [`@property`](https://docs.python.org/3/library/functions.html#property) |
 | | | [`@staticmethod`](https://docs.python.org/3/library/functions.html#staticmethod) |
 | Iterators | Python docs | [Iterators](https://docs.python.org/3/tutorial/classes.html#iterators) |
+| Jupyter notebooks | readthedocs.io | [Markdown cells](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html) |
 | Modules | StackOverflow | [What is `__init__.py` for?](https://stackoverflow.com/questions/448271/what-is-init-py-for) |
 | Quotes | towardsdatascience.com | [Single, double and triple quotes in Python](https://towardsdatascience.com/single-double-and-triple-quotes-in-python-7ceea990baf) |
 | Statements | techbeamers.com | [Multi-line statement in Python](https://www.techbeamers.com/understand-python-statement-indentation/#how-to-use-multiline-statement) |
