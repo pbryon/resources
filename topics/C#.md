@@ -230,6 +230,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Bundler & Minifier | chuci.info | [bundleconfig.json schema](https://lore.chuci.info/taurenshaman/json/3108b142d7b44f91bb7500820d44378f) | 
 | Project dependencies | jerriepelser.com | [Analyzing project dependencies part 1](https://www.jerriepelser.com/blog/analyze-dotnet-project-dependencies-part-1/) |
 | NuGet | Microsoft Docs | [Quickstart: Create and publish a package (dotnet CLI)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli) |
 | | | [NuGet config file](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) |
