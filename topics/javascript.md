@@ -2,9 +2,12 @@
 
 ## Contents
 
-* [JavaScript General](#javascript-general)
-* [TypeScript](#typescript)
-* [Angular](#angular)
+- [JavaScript](#javascript)
+  - [Contents](#contents)
+  - [JavaScript General](#javascript-general)
+  - [TypeScript](#typescript)
+  - [Angular](#angular)
+  - [NPM](#npm)
 
 ## JavaScript General
 
@@ -35,3 +38,9 @@
 | Router | StackOverflow | [How to use Router.navigateByUrl](https://stackoverflow.com/questions/45025334/how-to-use-router-navigatebyurl-and-router-navigate-in-angular?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) |
 | Router outlets | angular.io | [Router outlet](https://angular.io/api/router/RouterOutlet) |
 | | StackOverflow | [Emitting events from router outlet](https://stackoverflow.com/questions/37662456/angular-2-output-from-router-outlet?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa#answer-41989983) |
+
+## NPM
+
+| Topic | NPM | Documentation |
+| --- | --- | --- |
+| Extensible HTML | `htmx.org` | [HTMX](https://htmx.org/docs/#introduction) |
