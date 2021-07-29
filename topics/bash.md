@@ -15,3 +15,4 @@
 | --- | --- | --- |
 | File access problems | askubuntu.com | [WSL Ubuntu distro - how to solve operation not permitted on cloning repository](https://askubuntu.com/questions/1115564/wsl-ubuntu-distro-how-to-solve-operation-not-permitted-on-cloning-repository) |
 | Installing | Microsoft docs | [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10) |
+| Troubleshooting | StackOverflow | [How to solve `operation not permitted` when cloning repository](https://askubuntu.com/questions/1115564/wsl-ubuntu-distro-how-to-solve-operation-not-permitted-on-cloning-repository#answer-1242671) |
