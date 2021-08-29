@@ -11,7 +11,7 @@ namespace TestLinks
 {
     internal class Program
     {
-        private static HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
         private static LogLevel logLevel = LogLevel.Verbose;
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace TestLinks
             Console.Write("Checking topic links");
 
             bool first = true;
-            if (args.Count() > 0) {
+            if (args.Any()) {
                 Console.Write(" for topics:");
 
                 foreach (var arg in args) {
@@ -141,7 +141,6 @@ namespace TestLinks
             string link = @"\[(.+)\]\((.+)\)";
             string anchor = @"#.*$";
             string text, name, url;
-            bool hasDomainName = false;
             Match match;
 
             using (var reader = File.OpenText(file)) {
@@ -156,7 +155,7 @@ namespace TestLinks
                         name = match.Groups[1].Value;
                         url = match.Groups[2].Value;
                         match = match.NextMatch();
-                        hasDomainName = url.Split('.').Length > 1;
+                        bool hasDomainName = url.Split('.').Length > 1;
 
                         if (!hasDomainName)
                             continue;
@@ -217,7 +216,7 @@ namespace TestLinks
             if (!logLevel.IsDebug())
                 return;
 
-            response.RequestMessage = response.RequestMessage ?? new HttpRequestMessage();
+            response.RequestMessage ??= new HttpRequestMessage();
 
             Console.ForegroundColor = YELLOW;
             string indent = " ";
