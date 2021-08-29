@@ -95,6 +95,7 @@ namespace TestLinks.Extensions
             var body = html
                 .GetBody()
                 .ChildNodes.Filter()
+                .Where(x => x != null)
                 .Select(x => x.InnerText)
                 .Aggregate(new StringBuilder(), (builder, text) => builder.Append(' ').Append(text))
                 .ToString();
