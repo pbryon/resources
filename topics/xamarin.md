@@ -2,18 +2,19 @@
 
 [top]: #contents
 
-- [Android development](#android-development)
-- [iOS development](#ios-development)
-- [Frameworks](#frameworks)
-- [Layout tricks](#layout-tricks)
-- [Xamarin.Forms](#xamarin.forms)
-- [Custom controls](#custom-controls)
+- [Xamarin](#xamarin)
+  - [Android development](#android-development)
+  - [iOS development](#ios-development)
+  - [Xamarin.Forms](#xamarinforms)
+  - [Layout tricks](#layout-tricks)
+  - [Frameworks](#frameworks)
+  - [Custom controls](#custom-controls)
 
 ## Android development
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| Debugging on a device | Microsoft Docs | [Debug on Device](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) | 
+| Debugging on a device | Microsoft Docs | [Debug on Device](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-device?tabs=windows) |
 | | Microsoft Docs | [Set Up Device for Development](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/set-up-device-for-development) |
 | Resources | Microsoft Docs | [Android Resources](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/resources-in-android) |
 
@@ -34,6 +35,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Intro | Microsoft docs | [Creating Mobile Apps with Xamarin.Forms book](https://docs.microsoft.com/en-gb/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/) |
 | Controls | Microsoft docs | [Xamarin.Forms Views](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views) |
 | | xamarinhelp.com | [Xamarin Forms ListView Grouping](https://xamarinhelp.com/xamarin-forms-listview-grouping/) |
 | | Microsoft docs | [ListView Appearance](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance) |
