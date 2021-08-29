@@ -113,10 +113,10 @@ namespace TestLinks
             var content = await response.GetResponseBodyText();
 
             return content.ContainsAny("javascript")
-                && content.ContainsAny("enable", "turn on", "allow");
+                && content.ContainsAny("enable", "turn.*on", "allow");
         }
 
         private static bool ContainsAny(this string input, params string[] patterns)
-            => patterns.Any(x => input.Contains(x, StringComparison.OrdinalIgnoreCase));
+            => patterns.Any(x => Regex.IsMatch(input, x, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant));
     }
 }
