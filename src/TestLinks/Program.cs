@@ -229,7 +229,7 @@ namespace TestLinks
             if (response.Content != null)
             {
                 content = await response.Content.ReadAsStringAsync();
-                if (content.Contains(@"<!DOCTYPE html>"))
+                if (content.Contains(@"<!DOCTYPE html>", StringComparison.OrdinalIgnoreCase))
                 {
                     var html = new HtmlDocument();
                     html.LoadHtml(content);
