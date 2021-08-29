@@ -1,49 +1,29 @@
-using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TestLinks.Extensions;
+using TestLinks.Model;
 
 namespace TestLinks
 {
     internal class Program
     {
-        private static readonly HttpClient client = new HttpClient();
-        private static LogLevel logLevel = LogLevel.Verbose;
+        private static readonly HttpClient _client = new HttpClient().Configure();
 
-        /// <summary>
-        /// <see cref="Console.Error"/>
-        /// </summary>
-        private static readonly TextWriter STD_ERR = Console.Error;
-        /// <summary>
-        /// The original <see cref="Console.ForegroundColor"/> at startup.
-        /// </summary>
-        private static readonly ConsoleColor ORIGINAL_COLOR = Console.ForegroundColor;
-        /// <summary>
-        /// <see cref="ConsoleColor.Red"/>
-        /// </summary>
-        private static readonly ConsoleColor RED = ConsoleColor.Red;
-        /// <summary>
-        /// <see cref="ConsoleColor.Yellow"/>
-        /// </summary>
-        private static readonly ConsoleColor YELLOW = ConsoleColor.Yellow;
-        /// <summary>
-        /// <see cref="ConsoleColor.Green"/>
-        /// </summary>
-        private static readonly ConsoleColor GREEN = ConsoleColor.Green;
+        private static TestOutput _output;
 
         private static async Task Main(string[] args)
         {
-            SetupHttpClient();
-            args = logLevel.ApplyFlags(args);
+            args = args.GetLogLevel(out var logLevel);
+            _output = new TestOutput(logLevel);
 
             var topics = GetTopics(args);
-            WriteIntro(topics);
+            _output.WriteIntro(topics);
 
             bool hadError = false;
             List<string> broken;
@@ -54,7 +34,7 @@ namespace TestLinks
                 broken = new List<string>();
                 name = Path.GetFileNameWithoutExtension(topic);
 
-                WriteTopicIntro(name);
+                _output.WriteTopicIntro(name);
 
                 links = await ParseLinks(topic);
                 foreach (var link in links) {
@@ -66,40 +46,10 @@ namespace TestLinks
                 }
 
 
-                WriteTopicStatus(name, broken);
+                _output.WriteTopicStatus(name, broken);
             }
 
             Environment.Exit(hadError ? 1 : 0);
-        }
-
-        private static void SetupHttpClient()
-        {
-            client.Timeout = TimeSpan.FromMinutes(1);
-            client.DefaultRequestHeaders.TryAddWithoutValidation("Accept", "text/html");
-            client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "script");
-        }
-
-        private static void WriteIntro(IEnumerable<string> args)
-        {
-            if (!logLevel.IsVerbose())
-                return;
-
-            if (args.Count() == 1)
-                return;
-
-            Console.Write("Checking topic links");
-
-            bool first = true;
-            if (args.Any()) {
-                Console.Write(" for topics:");
-
-                foreach (var arg in args) {
-                    Console.Write("{0} {1}", first ? "" : ",", Path.GetFileNameWithoutExtension(arg));
-                    first = false;
-                }
-            }
-
-            Console.WriteLine("...");
         }
 
         private static IEnumerable<string> GetTopics(string[] args)
@@ -130,10 +80,9 @@ namespace TestLinks
             var root = Directory.GetParent(src).ToString();
             var topics = Path.Combine(root, "topics");
 
-            if (!Directory.Exists(topics)) {
-                STD_ERR.WriteLine("Directory not found: {0}", topics);
-                Environment.Exit(1);
-            }
+            if (!Directory.Exists(topics))
+                _output.FailWith("Directory not found: {0}", topics);
+
             return topics;
         }
 
@@ -180,7 +129,7 @@ namespace TestLinks
             HttpResponseMessage response;
             var error = new Exception();
             try {
-                response = await client.GetAsync(link.Url);
+                response = await _client.GetAsync(link.Url);
             }
             catch (Exception ex) {
                 error = ex;
@@ -190,109 +139,11 @@ namespace TestLinks
                 };
             }
 
-            ShowLinkStatus(link, response);
-            await ShowLinkDebug(response, error);
+            _output.ShowLinkStatus(link, response);
+            await _output.ShowLinkDebug(response, error);
 
-            return response.IsSuccessStatusCode || await response.ContainsJavascriptError();
-        }
-
-        private static void ShowLinkStatus(Link link, HttpResponseMessage response)
-        {
-            if (logLevel.IsMinimal())
-                Console.Write(".");
-
-            if (response.IsSuccessStatusCode && !logLevel.IsVerbose())
-                return;
-
-            Console.ForegroundColor = response.IsSuccessStatusCode ? GREEN : RED;
-            Console.Write("  [{0}]", (int) response.StatusCode);
-            Console.ForegroundColor = ORIGINAL_COLOR;
-            Console.WriteLine($" {link.Url}");
-        }
-
-        private static async Task ShowLinkDebug(HttpResponseMessage response, Exception ex)
-        {
-            if (response.IsSuccessStatusCode)
-                return;
-
-            if (!logLevel.IsDebug())
-                return;
-
-            response.RequestMessage ??= new HttpRequestMessage();
-
-            Console.ForegroundColor = YELLOW;
-            string indent = " ";
-            WritePadded(indent, response.RequestMessage.ToString(), "Request");
-            WritePadded(indent, response.ToString(), "Response");
-
-            string content = await response.GetResponseBodyText();
-
-            if (content?.Length > 500)
-                content = $"{content.Substring(0, 500)} [...]";
-
-            WritePadded(indent, content, "Content");
-            Console.ForegroundColor = ORIGINAL_COLOR;
-
-            string message = ex.InnerException?.Message ?? ex.Message;
-            if (!string.IsNullOrWhiteSpace(message)) {
-                Console.ForegroundColor = YELLOW;
-                WritePadded(indent, message, "Exception");
-                Console.ForegroundColor = ORIGINAL_COLOR;
-            }
-        }
-
-        private static void WritePadded(string prefix, string text, string header = null)
-        {
-            Console.WriteLine($"{prefix} {header}:");
-            string indent = new string(' ', prefix.Length + 3);
-            string[] lines = text
-                .Replace(", ", ",\n")
-                .Split('\n');
-
-            foreach (string line in lines) {
-                Console.WriteLine($"{indent}{line}");
-            }
-        }
-
-        private static void WriteTopicIntro(string topic)
-        {
-            if (logLevel.IsQuiet())
-                return;
-
-            string message = $"Topic '{topic}'";
-
-            if (logLevel.IsMinimal()) {
-                Console.Write($"{message}..");
-                return;
-            }
-
-            Console.WriteLine();
-            Console.WriteLine($"{message}:");
-        }
-
-        private static void WriteTopicStatus(string topic, List<string> brokenLinks)
-        {
-            if (logLevel.IsQuiet())
-                return;
-
-            if (brokenLinks.Count > 0) {
-                if (logLevel.IsQuiet())
-                    Console.WriteLine();
-                STD_ERR.WriteLine($"--> broken links for '{topic}':");
-
-                foreach (var link in brokenLinks) {
-                    STD_ERR.WriteLine($"  {link}");
-                }
-
-                return;
-            }
-
-            if (logLevel.IsMinimal()) {
-                Console.WriteLine(" OK");
-                return;
-            }
-
-            Console.WriteLine("--> topic OK");
+            return response.IsSuccessStatusCode
+                || await response.ContainsJavascriptError();
         }
     }
 }

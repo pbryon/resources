@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using TestLinks.Model;
 
-namespace TestLinks
+namespace TestLinks.Extensions
 {
     public static class LogLevelExtensions
     {
@@ -19,21 +20,24 @@ namespace TestLinks
         /// <param name="level"></param>
         /// <param name="args">The command-line arguments</param>
         /// <returns>A filtered list of command-line arguments</returns>
-        public static string[] ApplyFlags(this ref LogLevel level, string[] args)
+        public static string[] GetLogLevel(this string[] args, out LogLevel level)
         {
             var output = new List<string>();
-            Match match;
+            level = LogLevel.Verbose;
 
-            foreach (string arg in args) {
-                match = Regex.Match(arg, @"^-{1,2}(.+)$");
-                if (!match.Success) {
+            foreach (string arg in args)
+            {
+                var match = Regex.Match(arg, @"^-{1,2}(.+)$");
+                if (!match.Success)
+                {
                     output.Add(arg);
                     continue;
                 }
 
                 string flag = match.Groups[1].Value;
 
-                switch (flag) {
+                switch (flag)
+                {
                     case "verbose":
                         level |= LogLevel.Verbose;
                         break;

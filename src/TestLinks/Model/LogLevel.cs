@@ -1,6 +1,6 @@
 using System;
 
-namespace TestLinks
+namespace TestLinks.Model
 {
     [Flags]
     public enum LogLevel

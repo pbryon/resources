@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace TestLinks
+namespace TestLinks.Extensions
 {
     public static class HtmlExtensions
     {
