@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using TestLinks.Extensions;
 using TestLinks.Model;
@@ -13,7 +14,7 @@ namespace TestLinks
 {
     public class TopicValidator
     {
-        private TestOutput _output;
+        private readonly TestOutput _output;
         private readonly HttpClient _client;
         private readonly Regex IsLink = new(@"\[(.+)\]\((.+)\)", RegexOptions.Compiled | RegexOptions.CultureInvariant);
         private readonly Regex IsAnchor = new(@"#.*$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
@@ -24,7 +25,7 @@ namespace TestLinks
             _client = new HttpClient().Configure();
         }
 
-        public async Task<bool> Validate(params string[] args)
+        public async Task<bool> Validate(CancellationToken cancellationToken, params string[] args)
         {
             var topics = GetTopics(args);
             _output.WriteIntro(topics);
@@ -41,10 +42,10 @@ namespace TestLinks
 
                 _output.WriteTopicIntro(name);
 
-                links = await ParseLinks(topic);
+                links = await ParseLinks(topic, cancellationToken);
                 foreach (var link in links)
                 {
-                    if (await LinkWorks(link))
+                    if (await LinkWorks(link, cancellationToken))
                         continue;
 
                     broken.Add(link);
@@ -58,10 +59,9 @@ namespace TestLinks
             return hadError;
         }
 
-        private IEnumerable<string> GetTopics(string[] args)
+        private static IEnumerable<string> GetTopics(string[] args)
         {
             string basename;
-            var output = new List<string>();
             var search = new List<string>();
 
             foreach (string arg in args)
@@ -73,12 +73,11 @@ namespace TestLinks
             {
                 basename = Path.GetFileNameWithoutExtension(file);
                 if (args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower()))
-                    output.Add(file);
+                    yield return file;
             }
-            return output;
         }
 
-        private string GetTopicDir()
+        private static string GetTopicDir()
         {
             string src = AppDomain.CurrentDomain.BaseDirectory;
             while (!src.EndsWith("src"))
@@ -90,34 +89,27 @@ namespace TestLinks
             var topics = Path.Combine(root, "topics");
 
             if (!Directory.Exists(topics))
-                _output.FailWith("Directory not found: {0}", topics);
+                TestOutput.FailWith("Directory not found: {0}", topics);
 
             return topics;
         }
 
-        private async Task<List<Link>> ParseLinks(string file)
+        private async Task<List<Link>> ParseLinks(string file, CancellationToken cancellationToken)
+            => (await File.ReadAllTextAsync(file, cancellationToken))
+                .Split('\n')
+                .SelectMany(line => CreateLinks(line))
+                .ToList();
+
+        private IEnumerable<Link> CreateLinks(string line)
         {
-            var links = new List<Link>();
-            using var reader = File.OpenText(file);
-            var text = await reader.ReadToEndAsync();
+            if (line.StartsWith("-"))
+                yield break;
 
-            foreach (string line in text.Split('\n'))
-            {
-                if (line.StartsWith("-"))
-                    continue;
-
-                var match = IsLink.Match(line);
-                links.AddRange(CreateLinks(match));
-            }
-
-            return links.ToList();
-        }
-
-        private IEnumerable<Link> CreateLinks(Match match)
-        {
+            var match = IsLink.Match(line);
             while (match.Success)
             {
                 var (name, url) = (match.Groups[1].Value, match.Groups[2].Value);
+                match = match.NextMatch();
                 bool hasDomainName = url.Split('.').Length > 1;
 
                 if (!hasDomainName)
@@ -130,17 +122,16 @@ namespace TestLinks
                     url = IsAnchor.Replace(url, "");
 
                 yield return new Link(name, url);
-                match.NextMatch();
             }
         }
 
-        private async Task<bool> LinkWorks(Link link)
+        private async Task<bool> LinkWorks(Link link, CancellationToken cancellationToken)
         {
             HttpResponseMessage response;
             var error = new Exception();
             try
             {
-                response = await _client.GetAsync(link.Url);
+                response = await _client.GetAsync(link.Url, cancellationToken);
             }
             catch (Exception ex)
             {
@@ -153,11 +144,16 @@ namespace TestLinks
             }
 
             _output.ShowLinkStatus(link, response);
-            await _output.ShowLinkDebug(link, response, error);
 
-            link = link with { 
-                HasJavascriptError = await response.ContainsJavascriptError()
+            var content = await response.GetResponseBodyText(cancellationToken);
+
+            link = link with
+            {
+                HasJavascriptError = content.ContainsJavascriptError(),
+                Content = content
             };
+
+            _output.ShowLinkDebug(link, response, error);
 
             return response.IsSuccessStatusCode
                 || link.HasJavascriptError;

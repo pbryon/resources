@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace TestLinks.Extensions
@@ -15,7 +16,7 @@ namespace TestLinks.Extensions
         private static readonly string[] FormControls = new[] { "form", "select", "button", "input", "i", "img" };
         private static readonly string[] Headers = new[] { 1..7 }.Select(x => $"h{x}").ToArray();
 
-        public static HtmlNode? GetBody(this HtmlDocument document)
+        public static HtmlNode GetBody(this HtmlDocument document)
             => document.DocumentNode
                 .ChildNodes
                 .FirstOrDefault(x => x.Name == "html")
@@ -78,43 +79,36 @@ namespace TestLinks.Extensions
             return result.AsEnumerable();
         }
 
-        public static async Task<string> GetResponseBodyText(this HttpResponseMessage response)
+        public static async Task<string> GetResponseBodyText(this HttpResponseMessage response, CancellationToken cancellationToken)
         {
-            var content = string.Empty;
+            if (response.Content == null)
+                return string.Empty;
 
-            if (response.Content != null)
-            {
-                content = await response.Content.ReadAsStringAsync();
-                if (content.Contains(@"<!DOCTYPE html>", StringComparison.OrdinalIgnoreCase))
-                {
-                    var html = new HtmlDocument();
-                    html.LoadHtml(content);
-                    var body = html
-                        .GetBody()
-                        .ChildNodes.Filter()
-                        .Select(x => x.InnerText)
-                        .Aggregate(new StringBuilder(), (builder, text) => builder.Append(" ").Append(text))
-                        .ToString();
-                    content = Regex.Replace(body, @"\n+", "\n")
-                        .Replace("\t", " ")
-                        .Replace("  ", " ")
-                        .Trim();
-                }
-            }
+            var content = await response.Content.ReadAsStringAsync(cancellationToken);
 
-            return content;
+            if (!content.Contains(@"<!DOCTYPE html>", StringComparison.OrdinalIgnoreCase))
+                return content;
+
+            var html = new HtmlDocument();
+            html.LoadHtml(content);
+
+            var body = html
+                .GetBody()
+                .ChildNodes.Filter()
+                .Select(x => x.InnerText)
+                .Aggregate(new StringBuilder(), (builder, text) => builder.Append(' ').Append(text))
+                .ToString();
+            
+            return Regex.Replace(body, @"\n+", "\n")
+                .Replace("\t", " ")
+                .Replace("  ", " ")
+                .Trim();
         }
 
-        public static async Task<bool> ContainsJavascriptError(this HttpResponseMessage response)
-        {
-            if (response.IsSuccessStatusCode)
-                return false;
-
-            var content = await response.GetResponseBodyText();
-
-            return content.ContainsAny("javascript")
-                && content.ContainsAny("enable", "turn.*on", "allow");
-        }
+        public static bool ContainsJavascriptError(this string content)
+            => !string.IsNullOrWhiteSpace(content)
+            && content.ContainsAny("javascript")
+            && content.ContainsAny("enable", "turn.*on", "allow");
 
         private static bool ContainsAny(this string input, params string[] patterns)
             => patterns.Any(x => Regex.IsMatch(input, x, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant));

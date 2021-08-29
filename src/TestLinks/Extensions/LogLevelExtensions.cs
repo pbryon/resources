@@ -42,7 +42,7 @@ namespace TestLinks.Extensions
                         level |= LogLevel.Verbose;
                         break;
                     case "minimal":
-                        level = level & ~LogLevel.Verbose;
+                        level &= ~LogLevel.Verbose;
                         level |= LogLevel.Minimal;
                         break;
                     case "quiet":

@@ -16,7 +16,7 @@ namespace TestLinks
         /// <summary>
         /// The original <see cref="Console.ForegroundColor"/> at startup.
         /// </summary>
-        private static readonly ConsoleColor ORIGINAL_COLOR = Console.ForegroundColor;
+        private readonly ConsoleColor ORIGINAL_COLOR = Console.ForegroundColor;
 
         public TestOutput(LogLevel logLevel)
         {
@@ -65,7 +65,7 @@ namespace TestLinks
             Console.WriteLine($"{message}:");
         }
 
-        public void FailWith(string reason, params object[] args)
+        public static void FailWith(string reason, params object[] args)
         {
             Console.Error.WriteLine(reason, args);
             Environment.Exit(1);
@@ -88,7 +88,7 @@ namespace TestLinks
             Console.WriteLine($" {link.Url}");
         }
 
-        public async Task ShowLinkDebug(Link link, HttpResponseMessage response, Exception ex)
+        public void ShowLinkDebug(Link link, HttpResponseMessage response, Exception ex)
         {
             if (response.IsSuccessStatusCode)
                 return;
@@ -97,7 +97,7 @@ namespace TestLinks
                 return;
 
             response.RequestMessage ??= new HttpRequestMessage();
-            string content = await response.GetResponseBodyText();
+            var content = link.Content;
             string indent = " ";
 
             WriteColor(ConsoleColor.Yellow, () =>
@@ -124,7 +124,7 @@ namespace TestLinks
             }
         }
 
-        private static void WriteColor(ConsoleColor color, Action action)
+        private void WriteColor(ConsoleColor color, Action action)
         {
             Console.ForegroundColor = color;
             action?.Invoke();
@@ -134,7 +134,7 @@ namespace TestLinks
         private static void WritePadded(string prefix, string text, string header = null)
         {
             Console.WriteLine($"{prefix} {header}:");
-            string indent = new string(' ', prefix.Length + 3);
+            string indent = new(' ', prefix.Length + 3);
             string[] lines = text
                 .Replace(", ", ",\n")
                 .Split('\n');
