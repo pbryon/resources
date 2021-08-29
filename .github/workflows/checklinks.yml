@@ -15,8 +15,9 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: dotnet run
-      run: for file in topics/*.md; do \
-            topic=$(basename $file) \
-            topic="${topic%.*}" \
-            dotnet run --project src/TestLinks -- $topic \
-          done
+      run: |
+        for file in topics/*.md; do \
+          topic=$(basename $file) \
+          topic="${topic%.*}" \
+          dotnet run --project src/TestLinks -- $topic \
+        done
