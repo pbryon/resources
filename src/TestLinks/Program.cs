@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
@@ -232,7 +233,16 @@ namespace TestLinks
                 {
                     var html = new HtmlDocument();
                     html.LoadHtml(content);
-                    content = html.DocumentNode.InnerText;
+                    var body = html
+                        .GetBody()
+                        .ChildNodes.Filter()
+                        .Select(x => x.InnerText)
+                        .Aggregate(new StringBuilder(), (builder, text) => builder.Append(" ").Append(text))
+                        .ToString();
+                    content = Regex.Replace(body, @"\n+", "\n")
+                        .Replace("\t", " ")
+                        .Replace("  ", " ")
+                        .Trim();
                 }
             }
 
