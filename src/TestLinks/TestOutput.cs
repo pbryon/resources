@@ -14,10 +14,6 @@ namespace TestLinks
         private readonly LogLevel _logLevel;
         
         /// <summary>
-        /// <see cref="Console.Error"/>
-        /// </summary>
-        private static readonly TextWriter STD_ERR = Console.Error;
-        /// <summary>
         /// The original <see cref="Console.ForegroundColor"/> at startup.
         /// </summary>
         private static readonly ConsoleColor ORIGINAL_COLOR = Console.ForegroundColor;
@@ -71,7 +67,7 @@ namespace TestLinks
 
         public void FailWith(string reason, params object[] args)
         {
-            STD_ERR.WriteLine(reason, args);
+            Console.Error.WriteLine(reason, args);
             Environment.Exit(1);
         }
 
@@ -83,16 +79,16 @@ namespace TestLinks
             if (response.IsSuccessStatusCode && !_logLevel.IsVerbose())
                 return;
 
-            Console.ForegroundColor = response.IsSuccessStatusCode
+            var color = response.IsSuccessStatusCode
                 ? ConsoleColor.Green
                 : ConsoleColor.Red;
+            WriteColor(color, () =>
+                Console.Write("  [{0}]", (int)response.StatusCode));
             
-            Console.Write("  [{0}]", (int)response.StatusCode);
-            Console.ForegroundColor = ORIGINAL_COLOR;
             Console.WriteLine($" {link.Url}");
         }
 
-        public async Task ShowLinkDebug(HttpResponseMessage response, Exception ex)
+        public async Task ShowLinkDebug(Link link, HttpResponseMessage response, Exception ex)
         {
             if (response.IsSuccessStatusCode)
                 return;
@@ -101,27 +97,38 @@ namespace TestLinks
                 return;
 
             response.RequestMessage ??= new HttpRequestMessage();
-
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            string indent = " ";
-            WritePadded(indent, response.RequestMessage.ToString(), "Request");
-            WritePadded(indent, response.ToString(), "Response");
-
             string content = await response.GetResponseBodyText();
+            string indent = " ";
 
-            if (content?.Length > 500)
-                content = $"{content.Substring(0, 500)} [...]";
+            WriteColor(ConsoleColor.Yellow, () =>
+            {
+                
+                WritePadded(indent, response.RequestMessage.ToString(), "Request");
+                WritePadded(indent, response.ToString(), "Response");
 
-            WritePadded(indent, content, "Content");
-            Console.ForegroundColor = ORIGINAL_COLOR;
+                if (content?.Length > 500)
+                    content = $"{content.Substring(0, 500)} [...]";
+
+                WritePadded(indent, content, "Content");
+            });
 
             string message = ex.InnerException?.Message ?? ex.Message;
             if (!string.IsNullOrWhiteSpace(message))
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                WritePadded(indent, message, "Exception");
-                Console.ForegroundColor = ORIGINAL_COLOR;
+                WriteColor(ConsoleColor.Yellow, () => WritePadded(indent, message, "Exception"));
             }
+
+            if (link.HasJavascriptError)
+            {
+                WriteColor(ConsoleColor.Blue, () => Console.WriteLine("> ignored link with Javascript error"));
+            }
+        }
+
+        private static void WriteColor(ConsoleColor color, Action action)
+        {
+            Console.ForegroundColor = color;
+            action?.Invoke();
+            Console.ForegroundColor = ORIGINAL_COLOR;
         }
 
         private static void WritePadded(string prefix, string text, string header = null)
@@ -138,7 +145,7 @@ namespace TestLinks
             }
         }
 
-        public void WriteTopicStatus(string topic, List<string> brokenLinks)
+        public void WriteTopicStatus(string topic, List<Link> brokenLinks)
         {
             if (_logLevel.IsQuiet())
                 return;
@@ -147,11 +154,12 @@ namespace TestLinks
             {
                 if (_logLevel.IsQuiet())
                     Console.WriteLine();
-                STD_ERR.WriteLine($"--> broken links for '{topic}':");
+
+                Console.Error.WriteLine($"--> broken links for '{topic}':");
 
                 foreach (var link in brokenLinks)
                 {
-                    STD_ERR.WriteLine($"  {link}");
+                    Console.Error.WriteLine($"  {link.Text}");
                 }
 
                 return;
