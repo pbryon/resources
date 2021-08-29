@@ -13,11 +13,6 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.100
+        dotnet-version: 5.0.0
     - name: dotnet run
-      run: |
-        for file in topics/*.md; do \
-          topic=$(basename $file) \
-          topic="${topic%.*}" \
-          dotnet run --project src/TestLinks -- $topic \
-        done
+      run: dotnet run --project $LINKS_PROJECT
