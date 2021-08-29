@@ -143,20 +143,42 @@ namespace TestLinks
                 };
             }
 
-            _output.ShowLinkStatus(link, response);
-
-            var content = await response.GetResponseBodyText(cancellationToken);
-
-            link = link with
-            {
-                HasJavascriptError = content.ContainsJavascriptError(),
-                Content = content
-            };
-
-            _output.ShowLinkDebug(link, response, error);
+            link = await GetLinkDetails(link, response, error, cancellationToken);
+            
+            _output.ShowLinkStatus(link);
+            _output.ShowLinkDebug(link);
 
             return response.IsSuccessStatusCode
                 || link.HasJavascriptError;
+        }
+
+        private static async Task<Link> GetLinkDetails(Link link, HttpResponseMessage response, Exception ex, CancellationToken cancellationToken)
+        {
+            link = link with
+            {
+                IsValidated = response.IsSuccessStatusCode,
+                StatusCode = response.StatusCode
+            };
+
+            if (response.IsSuccessStatusCode)
+                return link;
+
+            var content = await response.GetResponseBodyText(cancellationToken);
+
+            if (content.Length > 500)
+                content = $"{content.Substring(0, 500)} [...]";
+
+            string message = ex.InnerException?.Message ?? ex.Message;
+            response.RequestMessage ??= new HttpRequestMessage();
+
+            return link with
+            {
+                HasJavascriptError = content.ContainsJavascriptError(),
+                Content = content,
+                Request = response.RequestMessage.ToString(),
+                Response = response.ToString(),
+                Message = message
+            };
         }
     }
 }

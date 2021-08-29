@@ -92,15 +92,19 @@ namespace TestLinks.Extensions
             var html = new HtmlDocument();
             html.LoadHtml(content);
 
-            var body = html
-                .GetBody()
+            var body = html.GetBody();
+            if (body == null)
+                return content;
+
+            var filtered = 
+                body
                 .ChildNodes.Filter()
                 .Where(x => x != null)
                 .Select(x => x.InnerText)
                 .Aggregate(new StringBuilder(), (builder, text) => builder.Append(' ').Append(text))
                 .ToString();
             
-            return Regex.Replace(body, @"\n+", "\n")
+            return Regex.Replace(filtered, @"\n+", "\n")
                 .Replace("\t", " ")
                 .Replace("  ", " ")
                 .Trim();

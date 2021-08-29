@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using TestLinks.Extensions;
 using TestLinks.Model;
 
@@ -71,51 +69,44 @@ namespace TestLinks
             Environment.Exit(1);
         }
 
-        public void ShowLinkStatus(Link link, HttpResponseMessage response)
+        public void ShowLinkStatus(Link link)
         {
             if (_logLevel.IsMinimal())
                 Console.Write(".");
 
-            if (response.IsSuccessStatusCode && !_logLevel.IsVerbose())
+            if (link.IsValidated && !_logLevel.IsVerbose())
                 return;
 
-            var color = response.IsSuccessStatusCode
+            var color = link.IsValidated
                 ? ConsoleColor.Green
                 : ConsoleColor.Red;
             WriteColor(color, () =>
-                Console.Write("  [{0}]", (int)response.StatusCode));
+                Console.Write("  [{0}]", (int)link.StatusCode));
             
             Console.WriteLine($" {link.Url}");
         }
 
-        public void ShowLinkDebug(Link link, HttpResponseMessage response, Exception ex)
+        public void ShowLinkDebug(Link link)
         {
-            if (response.IsSuccessStatusCode)
+            if (link.IsValidated)
                 return;
 
             if (!_logLevel.IsDebug())
                 return;
 
-            response.RequestMessage ??= new HttpRequestMessage();
-            var content = link.Content;
             string indent = " ";
 
             WriteColor(ConsoleColor.Yellow, () =>
             {
-                
-                WritePadded(indent, response.RequestMessage.ToString(), "Request");
-                WritePadded(indent, response.ToString(), "Response");
-
-                if (content?.Length > 500)
-                    content = $"{content.Substring(0, 500)} [...]";
-
-                WritePadded(indent, content, "Content");
+                WritePadded(indent, link.Request, "Request");
+                WritePadded(indent, link.Response, "Response");
+                WritePadded(indent, link.Content, "Content");
             });
 
-            string message = ex.InnerException?.Message ?? ex.Message;
-            if (!string.IsNullOrWhiteSpace(message))
+            
+            if (!string.IsNullOrWhiteSpace(link.Message))
             {
-                WriteColor(ConsoleColor.Yellow, () => WritePadded(indent, message, "Exception"));
+                WriteColor(ConsoleColor.Yellow, () => WritePadded(indent, link.Message, "Exception"));
             }
 
             if (link.HasJavascriptError)
