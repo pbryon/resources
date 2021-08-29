@@ -232,7 +232,9 @@ namespace TestLinks
                 {
                     var html = new HtmlDocument();
                     html.LoadHtml(content);
-                    content = html.DocumentNode.InnerHtml;
+                    content = html.DocumentNode.ChildNodes
+                        .FirstOrDefault(x => x.Name == "body")
+                        .InnerText;
                 }
             }
 
