@@ -1,3 +1,4 @@
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -225,7 +226,15 @@ namespace TestLinks
 
             string content = "";
             if (response.Content != null)
+            {
                 content = await response.Content.ReadAsStringAsync();
+                if (content.Contains(@"<!DOCTYPE html>"))
+                {
+                    var html = new HtmlDocument();
+                    html.LoadHtml(content);
+                    content = html.DocumentNode.InnerHtml;
+                }
+            }
 
             if (content?.Length > 500)
                 content = $"{content.Substring(0, 500)} [...]";
