@@ -1,6 +1,11 @@
 ﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace TestLinks
 {
@@ -72,5 +77,46 @@ namespace TestLinks
 
             return result.AsEnumerable();
         }
+
+        public static async Task<string> GetResponseBodyText(this HttpResponseMessage response)
+        {
+            var content = string.Empty;
+
+            if (response.Content != null)
+            {
+                content = await response.Content.ReadAsStringAsync();
+                if (content.Contains(@"<!DOCTYPE html>", StringComparison.OrdinalIgnoreCase))
+                {
+                    var html = new HtmlDocument();
+                    html.LoadHtml(content);
+                    var body = html
+                        .GetBody()
+                        .ChildNodes.Filter()
+                        .Select(x => x.InnerText)
+                        .Aggregate(new StringBuilder(), (builder, text) => builder.Append(" ").Append(text))
+                        .ToString();
+                    content = Regex.Replace(body, @"\n+", "\n")
+                        .Replace("\t", " ")
+                        .Replace("  ", " ")
+                        .Trim();
+                }
+            }
+
+            return content;
+        }
+
+        public static async Task<bool> ContainsJavascriptError(this HttpResponseMessage response)
+        {
+            if (response.IsSuccessStatusCode)
+                return false;
+
+            var content = await response.GetResponseBodyText();
+
+            return content.ContainsAny("javascript")
+                && content.ContainsAny("enable", "turn on", "allow");
+        }
+
+        private static bool ContainsAny(this string input, params string[] patterns)
+            => patterns.Any(x => input.Contains(x, StringComparison.OrdinalIgnoreCase));
     }
 }

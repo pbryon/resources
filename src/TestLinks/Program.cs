@@ -191,9 +191,9 @@ namespace TestLinks
             }
 
             ShowLinkStatus(link, response);
-            await ShowLinkDebug(link, response, error);
+            await ShowLinkDebug(response, error);
 
-            return response.IsSuccessStatusCode;
+            return response.IsSuccessStatusCode || await response.ContainsJavascriptError();
         }
 
         private static void ShowLinkStatus(Link link, HttpResponseMessage response)
@@ -210,7 +210,7 @@ namespace TestLinks
             Console.WriteLine($" {link.Url}");
         }
 
-        private static async Task ShowLinkDebug(Link link, HttpResponseMessage response, Exception ex)
+        private static async Task ShowLinkDebug(HttpResponseMessage response, Exception ex)
         {
             if (response.IsSuccessStatusCode)
                 return;
@@ -225,26 +225,7 @@ namespace TestLinks
             WritePadded(indent, response.RequestMessage.ToString(), "Request");
             WritePadded(indent, response.ToString(), "Response");
 
-            string content = "";
-            if (response.Content != null)
-            {
-                content = await response.Content.ReadAsStringAsync();
-                if (content.Contains(@"<!DOCTYPE html>", StringComparison.OrdinalIgnoreCase))
-                {
-                    var html = new HtmlDocument();
-                    html.LoadHtml(content);
-                    var body = html
-                        .GetBody()
-                        .ChildNodes.Filter()
-                        .Select(x => x.InnerText)
-                        .Aggregate(new StringBuilder(), (builder, text) => builder.Append(" ").Append(text))
-                        .ToString();
-                    content = Regex.Replace(body, @"\n+", "\n")
-                        .Replace("\t", " ")
-                        .Replace("  ", " ")
-                        .Trim();
-                }
-            }
+            string content = await response.GetResponseBodyText();
 
             if (content?.Length > 500)
                 content = $"{content.Substring(0, 500)} [...]";
