@@ -15,4 +15,4 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: dotnet run
-      run: dotnet run --project $LINKS_PROJECT
+      run: dotnet run --project $LINKS_PROJECT -- --debug
