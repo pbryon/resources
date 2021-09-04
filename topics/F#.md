@@ -41,6 +41,7 @@ If you're new to the use of F# or functional programming, see these talks.
 | Topic | Source | URL |
 | --- | --- | --- |
 | FP concepts | FSharpForFunAndProfit | The [Thinking Functionally](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) series |
+| Plugins | jannsen.io | [Plugin architecture in F#](https://blog.janssen.io/2020-12/Plugin-architecture-in-fsharp) |
 
 [Back to top][top]
 
