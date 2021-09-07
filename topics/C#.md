@@ -127,7 +127,9 @@
 | | Microsoft Docs | [Repository pattern benefits](https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff649690(v=pandp.10)) |
 |  | Microsoft Docs |[Testing with InMemory](https://docs.microsoft.com/en-gb/ef/core/miscellaneous/testing/in-memory) |
 | | Stormpath | [Tutorial: Using Entity Framework Core as an In-Memory Database for ASP.NET Core](https://stormpath.com/blog/tutorial-entity-framework-core-in-memory-database-asp-net-core) |
+| Queries | GitHub | [`.Where(...).FirstOrDefaultAsync()` faster than `.FirstOrDefaultAsync()`](https://github.com/dotnet/runtime/issues/19382#issuecomment-734524103) |
 | Views | Microsoft Docs | [Keyless entity types](https://docs.microsoft.com/en-us/ef/core/modeling/keyless-entity-types) |
+
 
 [Back to top][top]
 
