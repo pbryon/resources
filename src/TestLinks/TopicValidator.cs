@@ -19,10 +19,13 @@ namespace TestLinks
         private readonly Regex IsLink = new(@"\[(.+)\]\((.+)\)", RegexOptions.Compiled | RegexOptions.CultureInvariant);
         private readonly Regex IsAnchor = new(@"#.*$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
+        private readonly string _topicDir;
+
         public TopicValidator(LogLevel logLevel)
         {
             _output = new TestOutput(logLevel);
             _client = new HttpClient().Configure();
+            _topicDir = GetTopicDir();
         }
 
         public async Task<bool> Validate(CancellationToken cancellationToken, params string[] args)
@@ -59,7 +62,7 @@ namespace TestLinks
             return hadError;
         }
 
-        private static IEnumerable<string> GetTopics(string[] args)
+        private IEnumerable<string> GetTopics(string[] args)
         {
             string basename;
             var search = new List<string>();
@@ -69,7 +72,7 @@ namespace TestLinks
                 search.Add(Path.GetFileNameWithoutExtension(arg));
             }
 
-            foreach (var file in Directory.EnumerateFiles(GetTopicDir(), "*.md"))
+            foreach (var file in Directory.EnumerateFiles(_topicDir, "*.md"))
             {
                 basename = Path.GetFileNameWithoutExtension(file);
                 if (args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower()))
