@@ -164,5 +164,20 @@ namespace TestLinks
 
             Console.WriteLine("--> topic OK");
         }
+
+        public void WriteResult(List<Link> brokenLinks)
+        {
+            if (!_logLevel.IsDebug())
+                return;
+
+            var ordered = brokenLinks
+                .GroupBy(x => x.Topic)
+                .OrderBy(x => x);
+
+            foreach(var topic in ordered)
+            {
+                WriteTopicStatus(topic.Key, topic.ToList());
+            }
+        }
     }
 }

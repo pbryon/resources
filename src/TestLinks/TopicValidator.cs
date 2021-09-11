@@ -12,7 +12,7 @@ using TestLinks.Model;
 
 namespace TestLinks
 {
-    public class TopicValidator
+    internal class TopicValidator
     {
         private readonly TestOutput _output;
         private readonly HttpClient _client;
@@ -33,8 +33,8 @@ namespace TestLinks
             var topics = GetTopics(args).OrderBy(x => x).ToList();
             _output.WriteIntro(topics);
 
-            bool hadError = false;
             List<Link> broken;
+            List<Link> allBroken = new();
             List<Link> links;
             string name;
 
@@ -52,14 +52,15 @@ namespace TestLinks
                         continue;
 
                     broken.Add(link);
-                    hadError = true;
                 }
 
-
+                allBroken.AddRange(broken);
                 _output.WriteTopicStatus(name, broken);
             }
 
-            return hadError;
+            _output.WriteResult(allBroken);
+
+            return allBroken.Any();
         }
 
         private IEnumerable<string> GetTopics(string[] args)
