@@ -27,7 +27,7 @@ namespace TestLinks
 
         public async Task<bool> Validate(CancellationToken cancellationToken, params string[] args)
         {
-            var topics = GetTopics(args);
+            var topics = GetTopics(args).OrderBy(x => x).ToList();
             _output.WriteIntro(topics);
 
             bool hadError = false;
@@ -144,7 +144,7 @@ namespace TestLinks
             }
 
             link = await GetLinkDetails(link, response, error, cancellationToken);
-            
+
             _output.ShowLinkStatus(link);
             _output.ShowLinkDebug(link);
 
