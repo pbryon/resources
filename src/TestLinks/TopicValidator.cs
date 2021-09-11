@@ -98,12 +98,17 @@ namespace TestLinks
         }
 
         private async Task<List<Link>> ParseLinks(string file, CancellationToken cancellationToken)
-            => (await File.ReadAllTextAsync(file, cancellationToken))
-                .Split('\n')
-                .SelectMany(line => CreateLinks(line))
-                .ToList();
+        {
+            var topic = Path.GetFileNameWithoutExtension(file);
+            var text = await File.ReadAllTextAsync(file, cancellationToken);
 
-        private IEnumerable<Link> CreateLinks(string line)
+            return text
+                .Split('\n')
+                .SelectMany(line => CreateLinks(topic, line))
+                .ToList();
+        }
+
+        private IEnumerable<Link> CreateLinks(string topic, string line)
         {
             if (line.StartsWith("-"))
                 yield break;
@@ -124,7 +129,7 @@ namespace TestLinks
                 if (IsAnchor.IsMatch(url))
                     url = IsAnchor.Replace(url, "");
 
-                yield return new Link(name, url);
+                yield return new Link(topic, name, url);
             }
         }
 
