@@ -56,6 +56,7 @@ If you're new to the use of F# or functional programming, see these talks.
 | | Zaid Ajaj | [The Elmish Book](https://zaid-ajaj.github.io/the-elmish-book/#/) |
 | Feliz | Zaid Ajaj | [Feliz documentation](https://zaid-ajaj.github.io/Feliz) |
 | | Roman Provazník | [Feliz.Bulma documentation](https://dzoukr.github.io/Feliz.Bulma) |
+| Saturn | Aaron Powell | [Extending Saturn to support basic authentication](https://www.aaron-powell.com/posts/2019-05-27-implementing-basic-auth-on-saturn/) |
 
 [Back to top][top]
 
