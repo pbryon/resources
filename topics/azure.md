@@ -2,7 +2,9 @@
 
 [top]: #contents
 
-- [Azure functions](#azure-functions)
+- [Azure](#azure)
+  - [Azure Functions](#azure-functions)
+  - [Deployment](#deployment)
 
 ## Azure Functions
 
@@ -15,5 +17,11 @@
 | | github | [function.json documentation](https://github.com/Azure/azure-functions-host/wiki/function.json) |
 | | StackOverflow | [Change timer interval in Azure for Azure Function published from Visual Studio](https://stackoverflow.com/questions/46974395/change-timer-interval-in-azure-for-azure-function-published-from-visual-studio#answer-47177269) |
 | Dependency Injection | Microsoft Docs | [https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection) |
+
+## Deployment
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Bicep | Johnny Reilly | [Bicep meet Azure pipelines](https://blog.johnnyreilly.com/2021/03/20/bicep-meet-azure-pipelines/) |
 
 [Back to top][top]
