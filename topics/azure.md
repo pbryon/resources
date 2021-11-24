@@ -4,6 +4,7 @@
 
 - [Azure](#azure)
   - [Azure Functions](#azure-functions)
+  - [Azure DevOps](#azure-devops)
   - [Deployment](#deployment)
 
 ## Azure Functions
@@ -17,6 +18,12 @@
 | | github | [function.json documentation](https://github.com/Azure/azure-functions-host/wiki/function.json) |
 | | StackOverflow | [Change timer interval in Azure for Azure Function published from Visual Studio](https://stackoverflow.com/questions/46974395/change-timer-interval-in-azure-for-azure-function-published-from-visual-studio#answer-47177269) |
 | Dependency Injection | Microsoft Docs | [https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection](https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection) |
+
+## Azure DevOps
+
+| Topic | Source | URL |
+| --- | --- | --- |
+| Variables | Microsoft docs | [Use predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops) |
 
 ## Deployment
 
