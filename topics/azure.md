@@ -23,5 +23,6 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Bicep | Johnny Reilly | [Bicep meet Azure pipelines](https://blog.johnnyreilly.com/2021/03/20/bicep-meet-azure-pipelines/) |
+| | | [Bicep meet Azure pipelines 2](https://blog.johnnyreilly.com/2021/03/23/bicep-meet-azure-pipelines-2/) |
 
 [Back to top][top]
