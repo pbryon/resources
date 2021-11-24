@@ -23,6 +23,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
+| Artifacts | Microsoft docs | [Publish and download pipeline Artifacts](https://docs.microsoft.com/en-us/azure/devops/pipelines/artifacts/pipeline-artifacts?view=azure-devops&tabs=yaml) |
 | Variables | Microsoft docs | [Use predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops) |
 
 ## Deployment
