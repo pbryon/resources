@@ -20,6 +20,7 @@ namespace TestLinks
         private readonly Regex IsAnchor = new(@"#.*$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
         private readonly string _topicDir;
+        private int _totalTopics;
 
         public TopicValidator(LogLevel logLevel)
         {
@@ -31,7 +32,7 @@ namespace TestLinks
         public async Task<bool> Validate(CancellationToken cancellationToken, params string[] args)
         {
             var topics = GetTopics(args).OrderBy(x => x).ToList();
-            _output.WriteIntro(topics);
+            _output.WriteIntro(_totalTopics, topics);
 
             List<Link> broken;
             List<Link> allBroken = new();
@@ -75,6 +76,7 @@ namespace TestLinks
 
             foreach (var file in Directory.EnumerateFiles(_topicDir, "*.md"))
             {
+                _totalTopics++;
                 basename = Path.GetFileNameWithoutExtension(file);
                 if (args.Length == 0 || search.Any(x => x.ToLower() == basename.ToLower()))
                     yield return file;
@@ -90,12 +92,12 @@ namespace TestLinks
             }
 
             var root = Directory.GetParent(src).ToString();
-            var topics = Path.Combine(root, "topics");
+            var dir = Path.Combine(root, "topics");
 
-            if (!Directory.Exists(topics))
-                TestOutput.FailWith("Directory not found: {0}", topics);
+            if (!Directory.Exists(dir))
+                TestOutput.FailWith("Directory not found: {0}", dir);
 
-            return topics;
+            return dir;
         }
 
         private async Task<List<Link>> ParseLinks(string file, CancellationToken cancellationToken)

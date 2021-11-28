@@ -21,7 +21,7 @@ namespace TestLinks
             _logLevel = logLevel;
         }
 
-        public void WriteIntro(IEnumerable<string> args)
+        public void WriteIntro(int total, IEnumerable<string> args)
         {
             if (!_logLevel.IsVerbose())
                 return;
@@ -29,17 +29,24 @@ namespace TestLinks
             if (args.Count() == 1)
                 return;
 
-            Console.Write("Checking topic links");
+            Console.Write("Checking topic links ");
 
             bool first = true;
             if (args.Any())
             {
-                Console.Write(" for topics:");
-
-                foreach (var arg in args)
+                if (args.Count() == total)
                 {
-                    Console.Write("{0} {1}", first ? "" : ",", Path.GetFileNameWithoutExtension(arg));
-                    first = false;
+                    Console.Write("for all topics");
+                }
+                else
+                {
+                    Console.Write("for topics:");
+
+                    foreach (var arg in args)
+                    {
+                        Console.Write("{0} {1}", first ? "" : ",", Path.GetFileNameWithoutExtension(arg));
+                        first = false;
+                    }
                 }
             }
 
@@ -77,9 +84,14 @@ namespace TestLinks
             if (link.IsValidated && !_logLevel.IsVerbose())
                 return;
 
-            var color = link.IsValidated
-                ? ConsoleColor.Green
-                : ConsoleColor.Red;
+            ConsoleColor color = ConsoleColor.Green;
+            if (!link.IsValidated)
+            {
+                color = link.HasKnownError
+                    ? ConsoleColor.Blue
+                    : ConsoleColor.Red;
+            }
+
             WriteColor(color, () =>
                 Console.Write("  [{0}]", (int)link.StatusCode));
 
