@@ -5,8 +5,7 @@ namespace TestLinks.Model
     internal record Link(string Topic, string Text, string Url)
     {
         public string Content { get; set; }
-        public bool HasJavascriptError { get; set; }
-        public bool HasBrowserError { get; set; }
+        public bool HasKnownError { get; set; }
         public string Request { get; set; }
         public string Response { get; set; }
         public string Message { get; set; }

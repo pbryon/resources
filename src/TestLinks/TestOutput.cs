@@ -109,14 +109,9 @@ namespace TestLinks
                 WriteColor(ConsoleColor.Yellow, () => WritePadded(indent, link.Message, "Exception"));
             }
 
-            if (link.HasJavascriptError)
+            if (link.HasKnownError)
             {
-                WriteColor(ConsoleColor.Blue, () => Console.WriteLine("> ignored link with Javascript error"));
-            }
-
-            if (link.HasBrowserError)
-            {
-                WriteColor(ConsoleColor.Blue, () => Console.WriteLine("> ignored link with browser error"));
+                WriteColor(ConsoleColor.Blue, () => Console.WriteLine("> ignored link with known error"));
             }
         }
 

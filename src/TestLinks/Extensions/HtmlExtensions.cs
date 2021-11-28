@@ -110,14 +110,21 @@ namespace TestLinks.Extensions
                 .Trim();
         }
 
-        public static bool ContainsJavascriptError(this string content)
-            => !string.IsNullOrWhiteSpace(content)
-            && content.ContainsAny("javascript")
+        public static bool ContainsKnownErrors(this string content)
+        {
+            if (string.IsNullOrWhiteSpace(content))
+                return false;
+
+            return content.ContainsJavascriptError()
+                || content.ContainsBrowserError();
+        }
+
+        private static bool ContainsJavascriptError(this string content)
+            => content.ContainsAny("javascript")
             && content.ContainsAny("enable", "turn.*on", "allow");
 
-        public static bool ContainsBrowserError(this string content)
-            => !string.IsNullOrWhiteSpace(content)
-            && content.ContainsAny("This browser is no longer supported.", "Microsoft Edge");
+        private static bool ContainsBrowserError(this string content)
+            => content.ContainsAny("This browser is no longer supported.", "Microsoft Edge");
 
         private static bool ContainsAny(this string input, params string[] patterns)
             => patterns.Any(x => Regex.IsMatch(input, x, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant));

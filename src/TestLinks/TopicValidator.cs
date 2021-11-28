@@ -157,9 +157,7 @@ namespace TestLinks
             _output.ShowLinkStatus(link);
             _output.ShowLinkDebug(link);
 
-            return response.IsSuccessStatusCode
-                || link.HasJavascriptError
-                || link.HasBrowserError;
+            return response.IsSuccessStatusCode || link.HasKnownError;
         }
 
         private static async Task<Link> GetLinkDetails(Link link, HttpResponseMessage response, Exception ex, CancellationToken cancellationToken)
@@ -183,8 +181,7 @@ namespace TestLinks
 
             return link with
             {
-                HasJavascriptError = content.ContainsJavascriptError(),
-                HasBrowserError = content.ContainsBrowserError(),
+                HasKnownError = content.ContainsKnownErrors(),
                 Content = content,
                 Request = response.RequestMessage.ToString(),
                 Response = response.ToString(),
