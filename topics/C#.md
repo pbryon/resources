@@ -84,12 +84,12 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| Macros | Microsoft Docs | [Common macros for build commands and properties](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties?view=vs-2017) |
-| Properties | Microsoft Docs | [MSBuild well-known and reserved properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2017) |
-| | | [Common MSBuild properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2017) |
-| | | [Property element](https://docs.microsoft.com/en-us/visualstudio/msbuild/property-element-msbuild?view=vs-2017) |
-| Tasks | Microsoft Docs | [Message task](https://docs.microsoft.com/en-us/visualstudio/msbuild/message-task?view=vs-2017) |
-| | | [Copy Task](https://docs.microsoft.com/en-us/visualstudio/msbuild/copy-task?view=vs-2017) |
+| Macros | Microsoft Docs | [Common macros for build commands and properties](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties) |
+| Properties | Microsoft Docs | [MSBuild well-known and reserved properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties) |
+| | | [Common MSBuild properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties) |
+| | | [Property element](https://docs.microsoft.com/en-us/visualstudio/msbuild/property-element-msbuild) |
+| Tasks | Microsoft Docs | [Message task](https://docs.microsoft.com/en-us/visualstudio/msbuild/message-task) |
+| | | [Copy Task](https://docs.microsoft.com/en-us/visualstudio/msbuild/copy-task) |
 | | GitHub | [.NET Core - Tasks named "AfterBuild" and "AfterPublish" are ignore](https://github.com/dotnet/cli/issues/8304) |
 
 [Back to top][top]
@@ -140,25 +140,25 @@
 | dotnet CLI | GitHub | [.NET Command Line Interface](https://github.com/dotnet/cli/blob/master/README.md) |
 | | Maarten Balliauw | [Extending dotnet CLI with custom tools (blog post)](https://blog.maartenballiauw.be/post/2017/04/10/extending-dotnet-cli-with-custom-tools.html) and [dotnetcli-init (GitHub)](https://github.com/maartenba/dotnetcli-init) |
 | Client-side| Microsoft Docs | [Bundling and minification](https://docs.microsoft.com/en-us/aspnet/core/client-side/bundling-and-minification) |
-| HTTPS | Microsoft Docs | [Enforece HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-2.0&tabs=visual-studio) |
+| HTTPS | Microsoft Docs | [Enforece HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?tabs=visual-studio) |
 | | MSDN blogs | [Configuring HTTPS in ASP.NET Core across different platforms](https://blogs.msdn.microsoft.com/webdev/2017/11/29/configuring-https-in-asp-net-core-across-different-platforms/) |
 | | humankode.com | [Develop Locally with HTTPS, Self-Signed Certificates and ASP.NET Core](https://www.humankode.com/asp-net-core/develop-locally-with-https-self-signed-certificates-and-asp-net-core) |
 | | blinkingcaret.com | [HTTPS in ASP.NET Core from scratch](https://www.blinkingcaret.com/2017/03/01/https-asp-net-core/) |
 | Middleware | Microsoft Docs | [ASP.NET Core Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware) |
 | Razor pages| Microsoft Docs | [Getting started with Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) |
 | | learnrazorpages.com | [Friendly Routes](https://www.learnrazorpages.com/razor-pages/routing#friendly-routes) |
-| Razor class libraries | Microsoft Docs | [Create reusable UI using the Razor class library project in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-3.1&tabs=visual-studio) |
-| Security | Microsoft Docs | [Overview of ASP.NET Core Security](https://docs.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-2.1) |
-| | | [Authentication in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/index?view=aspnetcore-2.1) |
-| | | [Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/index?view=aspnetcore-2.1) |
-| |  | [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=visual-studio) |
+| Razor class libraries | Microsoft Docs | [Create reusable UI using the Razor class library project in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?tabs=visual-studio) |
+| Security | Microsoft Docs | [Overview of ASP.NET Core Security](https://docs.microsoft.com/en-us/aspnet/core/security/) |
+| | | [Authentication in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/index) |
+| | | [Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/index) |
+| |  | [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets&tabs=visual-studio) |
 | | Jerrie Pelser | [Authenticate with OAuth 2.0 in ASP.NET Core 2.0](https://www.jerriepelser.com/blog/authenticate-oauth-aspnet-core-2/) |
 | Swagger/OpenAPI | Microsoft Docs | [ASP.NET Core Web API help pages with Open API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger) |
 | | GitHub | [SwashBuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) |
 | | GitHub issue | [Support for ASP.NET API Versioning?](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/244) |
 | | StackOverflow | [Rename Model in SwashBuckle 6 with ASP.NET Core Web API](https://stackoverflow.com/questions/40644052/rename-model-in-swashbuckle-6-swagger-with-asp-net-core-web-api) |
 | | GitHub | [201 CREATED shows up as status 200 in Swagger UI](https://github.com/domaindrivendev/Swashbuckle/issues/702) |
-| Testing | Microsoft Docs | [Testing Controller logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-2.1) |
+| Testing | Microsoft Docs | [Testing Controller logic in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing) |
 | | Microsoft Docs | [Razor pages testing](https://docs.microsoft.com/en-us/aspnet/core/testing/razor-pages-testing) |
 | | Microsoft Docs | [Unit testing with dotnet test and xUnit](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) |
 | | Hossam Barakat | [Unit testing ASP.NET Core Tag Helper](http://www.hossambarakat.net/2016/02/29/unit-testing-asp-net-core-tag-helper/) |
@@ -180,8 +180,8 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| General | Microsoft Docs | [Hosting models](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-3.0) |
-| Razor components | Microsoft Docs | [Create and use ASP.NET Core Razor components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components?view=aspnetcore-3.0) |
+| General | Microsoft Docs | [Hosting models](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models) |
+| Razor components | Microsoft Docs | [Create and use ASP.NET Core Razor components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components) |
 
 [Back to top][top]
 
@@ -201,11 +201,11 @@
 | Topic | Source | URL |
 | --- | --- | --- |
 | Angular | okta.com | [Build a CRUD App with ASP.NET Core and Angular](https://developer.okta.com/blog/2018/04/26/build-crud-app-aspnetcore-angular) |
-| SignalR | Microsoft Docs | [Introduction to ASP.NET Core SignalR](https://docs.microsoft.com/en-gb/aspnet/core/tutorials/signalr?view=aspnetcore-3.1) |
-| | | [Use Hubs in SignalR for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-3.1) |
+| SignalR | Microsoft Docs | [Introduction to ASP.NET Core SignalR](https://docs.microsoft.com/en-gb/aspnet/core/tutorials/signalr) |
+| | | [Use Hubs in SignalR for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs) |
 | | MSDN Magazine | [Discovering ASP.NET Core SignalR](https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/april/cutting-edge-discovering-asp-net-core-signalr) |
 | Single Page Applications | GitHub | [AspNetCore JavaScriptServices documentation](https://github.com/aspnet/JavaScriptServices) |
-| Webpack | Microsoft docs | [Using SignalR with Webpack and TypeScript](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-2.1&tabs=visual-studio) |
+| Webpack | Microsoft docs | [Using SignalR with Webpack and TypeScript](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack&tabs=visual-studio) |
 
 [Back to top][top]
 
@@ -232,7 +232,7 @@
 
 | Topic | Source | URL |
 | --- | --- | --- |
-| Bundler & Minifier | chuci.info | [bundleconfig.json schema](https://lore.chuci.info/taurenshaman/json/3108b142d7b44f91bb7500820d44378f) | 
+| Bundler & Minifier | chuci.info | [bundleconfig.json schema](https://lore.chuci.info/taurenshaman/json/3108b142d7b44f91bb7500820d44378f) |
 | Project dependencies | jerriepelser.com | [Analyzing project dependencies part 1](https://www.jerriepelser.com/blog/analyze-dotnet-project-dependencies-part-1/) |
 | NuGet | Microsoft Docs | [Quickstart: Create and publish a package (dotnet CLI)](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli) |
 | | | [NuGet config file](https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file) |
@@ -242,4 +242,3 @@
 | | | [.nuspec - including content files](https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-content-files) |
 
 [Back to top][top]
-
