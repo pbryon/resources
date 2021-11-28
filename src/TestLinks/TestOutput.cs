@@ -10,7 +10,7 @@ namespace TestLinks
     internal class TestOutput
     {
         private readonly LogLevel _logLevel;
-        
+
         /// <summary>
         /// The original <see cref="Console.ForegroundColor"/> at startup.
         /// </summary>
@@ -82,7 +82,7 @@ namespace TestLinks
                 : ConsoleColor.Red;
             WriteColor(color, () =>
                 Console.Write("  [{0}]", (int)link.StatusCode));
-            
+
             Console.WriteLine($" {link.Url}");
         }
 
@@ -103,7 +103,7 @@ namespace TestLinks
                 WritePadded(indent, link.Content, "Content");
             });
 
-            
+
             if (!string.IsNullOrWhiteSpace(link.Message))
             {
                 WriteColor(ConsoleColor.Yellow, () => WritePadded(indent, link.Message, "Exception"));
@@ -112,6 +112,11 @@ namespace TestLinks
             if (link.HasJavascriptError)
             {
                 WriteColor(ConsoleColor.Blue, () => Console.WriteLine("> ignored link with Javascript error"));
+            }
+
+            if (link.HasBrowserError)
+            {
+                WriteColor(ConsoleColor.Blue, () => Console.WriteLine("> ignored link with browser error"));
             }
         }
 

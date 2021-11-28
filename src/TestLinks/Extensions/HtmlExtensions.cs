@@ -36,7 +36,7 @@ namespace TestLinks.Extensions
                     .WithoutComments()
                     .WithoutHeaders()
                     .WithoutWhitespace();
-            
+
             foreach(var node in filtered)
             {
                 if (node.ChildNodes.Any())
@@ -96,14 +96,14 @@ namespace TestLinks.Extensions
             if (body == null)
                 return content;
 
-            var filtered = 
+            var filtered =
                 body
                 .ChildNodes.Filter()
                 .Where(x => x != null)
                 .Select(x => x.InnerText)
                 .Aggregate(new StringBuilder(), (builder, text) => builder.Append(' ').Append(text))
                 .ToString();
-            
+
             return Regex.Replace(filtered, @"\n+", "\n")
                 .Replace("\t", " ")
                 .Replace("  ", " ")
@@ -114,6 +114,10 @@ namespace TestLinks.Extensions
             => !string.IsNullOrWhiteSpace(content)
             && content.ContainsAny("javascript")
             && content.ContainsAny("enable", "turn.*on", "allow");
+
+        public static bool ContainsBrowserError(this string content)
+            => !string.IsNullOrWhiteSpace(content)
+            && content.ContainsAny("This browser is no longer supported.", "Microsoft Edge");
 
         private static bool ContainsAny(this string input, params string[] patterns)
             => patterns.Any(x => Regex.IsMatch(input, x, RegexOptions.IgnoreCase | RegexOptions.CultureInvariant));
