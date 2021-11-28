@@ -140,18 +140,18 @@
 | dotnet CLI | GitHub | [.NET Command Line Interface](https://github.com/dotnet/cli/blob/master/README.md) |
 | | Maarten Balliauw | [Extending dotnet CLI with custom tools (blog post)](https://blog.maartenballiauw.be/post/2017/04/10/extending-dotnet-cli-with-custom-tools.html) and [dotnetcli-init (GitHub)](https://github.com/maartenba/dotnetcli-init) |
 | Client-side| Microsoft Docs | [Bundling and minification](https://docs.microsoft.com/en-us/aspnet/core/client-side/bundling-and-minification) |
-| HTTPS | Microsoft Docs | [Enforece HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?tabs=visual-studio) |
+| HTTPS | Microsoft Docs | [Enforece HTTPS in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl) |
 | | MSDN blogs | [Configuring HTTPS in ASP.NET Core across different platforms](https://blogs.msdn.microsoft.com/webdev/2017/11/29/configuring-https-in-asp-net-core-across-different-platforms/) |
 | | humankode.com | [Develop Locally with HTTPS, Self-Signed Certificates and ASP.NET Core](https://www.humankode.com/asp-net-core/develop-locally-with-https-self-signed-certificates-and-asp-net-core) |
 | | blinkingcaret.com | [HTTPS in ASP.NET Core from scratch](https://www.blinkingcaret.com/2017/03/01/https-asp-net-core/) |
 | Middleware | Microsoft Docs | [ASP.NET Core Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware) |
 | Razor pages| Microsoft Docs | [Getting started with Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) |
 | | learnrazorpages.com | [Friendly Routes](https://www.learnrazorpages.com/razor-pages/routing#friendly-routes) |
-| Razor class libraries | Microsoft Docs | [Create reusable UI using the Razor class library project in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?tabs=visual-studio) |
+| Razor class libraries | Microsoft Docs | [Create reusable UI using the Razor class library project in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class) |
 | Security | Microsoft Docs | [Overview of ASP.NET Core Security](https://docs.microsoft.com/en-us/aspnet/core/security/) |
 | | | [Authentication in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/index) |
 | | | [Authorization in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/index) |
-| |  | [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets&tabs=visual-studio) |
+| |  | [Safe storage of app secrets in development in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets) |
 | | Jerrie Pelser | [Authenticate with OAuth 2.0 in ASP.NET Core 2.0](https://www.jerriepelser.com/blog/authenticate-oauth-aspnet-core-2/) |
 | Swagger/OpenAPI | Microsoft Docs | [ASP.NET Core Web API help pages with Open API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger) |
 | | GitHub | [SwashBuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) |
@@ -205,7 +205,7 @@
 | | | [Use Hubs in SignalR for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs) |
 | | MSDN Magazine | [Discovering ASP.NET Core SignalR](https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/april/cutting-edge-discovering-asp-net-core-signalr) |
 | Single Page Applications | GitHub | [AspNetCore JavaScriptServices documentation](https://github.com/aspnet/JavaScriptServices) |
-| Webpack | Microsoft docs | [Using SignalR with Webpack and TypeScript](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack&tabs=visual-studio) |
+| Webpack | Microsoft docs | [Using SignalR with Webpack and TypeScript](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack) |
 
 [Back to top][top]
 
