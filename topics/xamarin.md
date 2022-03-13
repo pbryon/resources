@@ -37,6 +37,7 @@
 | --- | --- | --- |
 | Intro | Microsoft docs | [Creating Mobile Apps with Xamarin.Forms book](https://docs.microsoft.com/en-gb/xamarin/xamarin-forms/creating-mobile-apps-xamarin-forms/) |
 | Controls | Microsoft docs | [Xamarin.Forms Views](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/views) |
+| | James Montemagno | [Xamarin.Forms.ListView](https://www.youtube.com/watch?v=VzFqQv8YJNM) |
 | | xamarinhelp.com | [Xamarin Forms ListView Grouping](https://xamarinhelp.com/xamarin-forms-listview-grouping/) |
 | | Microsoft docs | [ListView Appearance](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-list-appearance) |
 | Gesture recognizers | Microsoft docs | [Adding a tap gesture recognizer](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/gestures/tap) |
@@ -48,6 +49,8 @@
 | Layouts | Microsoft docs | [Xamarin.Forms layouts](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/layouts) |
 | Page layout | xamarinhelp.com | [Xamarin Forms Page Templates](https://xamarinhelp.com/xamarin-forms-page-templates/) |
 | Performance | Microsoft docs | [Improve Xamarin.Forms App Performance](https://docs.microsoft.com/en-gb/xamarin/xamarin-forms/deploy-test/performance) |
+| Shell | Microsoft DevBlogs | [Xamarin.Forms: Getting started with Shell](https://devblogs.microsoft.com/xamarin/shell-xamarin-forms-4-0-getting-started/) |
+| | Microsoft Docs | [Shell documentation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell) |
 | Tabs | Microsoft docs | [Xamarin.Forms Tabbed Page](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/tabbed-page) |
 
 [Back to top][top]
